@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>민나노 일본어 2과 정리</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #f5f6f8;
+    color: #333;
+    padding: 2rem 1rem;
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .top-label {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 6px;
+    letter-spacing: 0.05em;
+  }
+  h1 {
+    text-align: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 2rem;
+  }
+
+  /* 섹션 헤더 */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 2rem 0 1rem;
+  }
+  .section-num {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 700; color: white;
+    flex-shrink: 0;
+  }
+  .section-num.blue { background: #4a90d9; }
+  .section-num.orange { background: #f0a500; }
+  .section-num.green { background: #3aaa6e; }
+  .section-title {
+    font-size: 16px; font-weight: 700; color: #222;
+  }
+
+  /* 문형 카드 */
+  .pattern-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.2rem 1.4rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid #ccc;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .pattern-card.c1 { border-left-color: #4a90d9; }
+  .pattern-card.c2 { border-left-color: #e85d5d; }
+  .pattern-card.c3 { border-left-color: #f0a500; }
+  .pattern-card.c4 { border-left-color: #9b59b6; }
+  .pattern-card.c5 { border-left-color: #3aaa6e; }
+  .pattern-card.c6 { border-left-color: #e67e22; }
+  .pattern-card.c7 { border-left-color: #2980b9; }
+  .pattern-card.c8 { border-left-color: #c0392b; }
+
+  .pattern-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.8rem;
+  }
+  .pattern-num-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .pattern-num {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; color: white;
+    flex-shrink: 0;
+  }
+  .c1 .pattern-num { background: #4a90d9; }
+  .c2 .pattern-num { background: #e85d5d; }
+  .c3 .pattern-num { background: #f0a500; }
+  .c4 .pattern-num { background: #9b59b6; }
+  .c5 .pattern-num { background: #3aaa6e; }
+  .c6 .pattern-num { background: #e67e22; }
+  .c7 .pattern-num { background: #2980b9; }
+  .c8 .pattern-num { background: #c0392b; }
+
+  .pattern-title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #222;
+  }
+  .pattern-kr {
+    font-size: 12px;
+    color: #888;
+  }
+
+  .example {
+    background: #f8f9fb;
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    margin-top: 0.5rem;
+  }
+  .example + .example { margin-top: 0.4rem; }
+  .jp {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    color: #222;
+  }
+  .jp .key { font-weight: 700; }
+  .c1 .jp .key { color: #4a90d9; }
+  .c2 .jp .key { color: #e85d5d; }
+  .c3 .jp .key { color: #f0a500; }
+  .c4 .jp .key { color: #9b59b6; }
+  .c5 .jp .key { color: #3aaa6e; }
+  .c6 .jp .key { color: #e67e22; }
+  .c7 .jp .key { color: #2980b9; }
+  .c8 .jp .key { color: #c0392b; }
+  .kr { font-size: 13px; color: #666; margin-top: 2px; }
+  .note { font-size: 12px; color: #999; margin-top: 4px; }
+  .arrow { color: #aaa; margin: 2px 0; font-size: 13px; }
+
+  /* 핵심 표현 그리드 */
+  .expr-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+  .expr-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    border-top: 3px solid #ccc;
+  }
+  .expr-card.e1 { border-top-color: #4a90d9; }
+  .expr-card.e2 { border-top-color: #e85d5d; }
+  .expr-card.e3 { border-top-color: #f0a500; }
+  .expr-card.e4 { border-top-color: #9b59b6; }
+  .expr-card.e5 { border-top-color: #3aaa6e; }
+  .expr-card.e6 { border-top-color: #e67e22; }
+  .expr-jp {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 4px;
+  }
+  .expr-ruby {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+  .e1 .expr-ruby { color: #4a90d9; }
+  .e2 .expr-ruby { color: #e85d5d; }
+  .e3 .expr-ruby { color: #f0a500; }
+  .e4 .expr-ruby { color: #9b59b6; }
+  .e5 .expr-ruby { color: #3aaa6e; }
+  .e6 .expr-ruby { color: #e67e22; }
+  .expr-kr { font-size: 12px; color: #666; }
+
+  /* 조사 표 */
+  .particle-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .particle-table th {
+    background: #4a90d9;
+    color: white;
+    padding: 0.6rem 1rem;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+  }
+  .particle-table td {
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 13px;
+    vertical-align: middle;
+  }
+  .particle-table tr:last-child td { border-bottom: none; }
+  .particle-table tr:nth-child(even) td { background: #fafafa; }
+  .p-char {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #4a90d9;
+  }
+  .p-meaning { color: #555; }
+  .p-note { font-size: 11px; color: #999; }
+  .p-example {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #333;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 11px;
+    color: #bbb;
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+  }
+
+  @media (max-width: 500px) {
+    .expr-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-label">みんなの日本語 初級Ⅰ · 第2課</div>
+<h1>これから お世話に なります<br><span style="font-size:16px;font-weight:500;color:#555;">— 문형 &amp; 표현 정리</span></h1>
+
+<!-- 섹션 1: 문형 패턴 -->
+<div class="section-header">
+  <div class="section-num blue">1</div>
+  <div class="section-title">문형 패턴 (文型パターン)</div>
+</div>
+
+<!-- 1 -->
+<div class="pattern-card c1">
+  <div class="pattern-header">
+    <div class="pattern-num-title">
+      <div class="pattern-num">1</div>
+      <div class="pattern-title">これ／それ／あれ は Nです。</div>
+    </div>
+    <div class="pattern-kr">이/그/저것은 ~입니다</div>
+  </div>
+  <div class="example">
+    <div class="jp">これは <span class="key">辞書</span>です。</div>
+    <div class="kr">이것은 사전입니다.</div>
+  </div>
+  <div class="example">
+    <div class="jp">それは <span class="key">ノート</span>ですか。</div>
+    <div class="kr">그것은 노트입니까?</div>
+    <div class="arrow">→ いいえ、これは <span style="font-family:'Noto Sans JP'">手帳</span>です。</div>
+    <div class="kr" style="margin-left:16px">아니요, 이것은 수첩입니다.</div>
+  </div>
+  <div class="note">※ これ: 화자 가까이 / それ: 청자 가까이 / あれ: 둘 다에서 멀리</div>
+</div>
+
+<!-- 2 -->
+<div class="pattern-card c2">
+  <div class="pattern-header">
+    <div class="pattern-num-title">
+      <div class="pattern-num">2</div>
+      <div class="pattern-title">この／その／あの N は Nです。</div>
+    </div>
+    <div class="pattern-kr">이/그/저 ~은 ~입니다</div>
+  </div>
+  <div class="example">
+    <div class="jp"><span class="key">この</span> 本は わたしのです。</div>
+    <div class="kr">이 책은 제 것입니다.</div>
+  </div>
+  <div class="example">
+    <div class="jp"><span class="key">あの</span> かばんは だれのですか。</div>
+    <div class="kr">저 가방은 누구 것입니까?</div>
+  </div>
+  <div class="note">※ この/その/あの는 뒤에 반드시 명사가 옴 (これ/それ/あれ는 단독 사용)</div>
+</div>
+
+<!-- 3 -->
+<div class="pattern-card c3">
+  <div class="pattern-header">
+    <div class="pattern-num-title">
+      <div class="pattern-num">3</div>
+      <div class="pattern-title">〜は 何ですか。</div>
+    </div>
+    <div class="pattern-kr">~은 무엇입니까?</div>
+  </div>
+  <div class="example">
+    <div class="jp">それは <span class="key">何</span>ですか。</div>
+    <div class="kr">그것은 무엇입니까?</div>
+    <div class="arrow">→ 名刺です。</div>
+    <div class="kr" style="margin-left:16px">명함입니다.</div>
+  </div>
+  <div class="example">
+    <div class="jp">それは <span class="key">何の</span> 雑誌ですか。</div>
+    <div class="kr">그것은 무슨 잡지입니까?</div>
+    <div class="arrow">→ コンピューターの 雑誌です。</div>
+    <div class="kr" style="margin-left:16px">컴퓨터 잡지입니다.</div>
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="pattern-card c4">
+  <div class="pattern-header">
+    <div class="pattern-num-title">
+      <div class="pattern-num">4</div>
+      <div class="pattern-title">〜は 「A」ですか、「B」ですか。</div>
+    </div>
+    <div class="pattern-kr">~은 A입니까, B입니까?</div>
+  </div>
+  <div class="example">
+    <div class="jp">これは 「9」ですか、<span class="key">「7」</span>ですか。</div>
+    <div class="kr">이것은 '9'입니까, '7'입니까?</div>
+    <div class="arrow">→ 「7」です。</div>
+    <div class="kr" style="margin-left:16px">'7'입니다.</div>
+  </div>
+  <div class="note">※ 두 가지 중 하나를 고르는 의문문. 대답은 はい/いいえ 없이 바로 선택.</div>
+</div>
+
+<!-- 5 -->
+<div class="pattern-card c5">
+  <div class="pattern-header">
+    <div class="pattern-num-title">
+      <div class="pattern-num">5</div>
+      <div class="pattern-title">N1 の N2</div>
+    </div>
+    <div class="pattern-kr">N1의 N2</div>
+  </div>
+  <div class="example">
+    <div class="jp">これは コンピューターの <span class="key">本</span>です。</div>
+    <div class="kr">이것은 컴퓨터 책입니다. (소속·관련)</div>
+  </div>
+  <div class="example">
+    <div class="jp">あれは <span class="key">わたしの</span> かばんです。</div>
+    <div class="kr">저것은 제 가방입니다. (소유)</div>
+  </div>
+  <div class="note">※ 1과에서 배운 の의 확장: ①관련 ②소유 두 가지 용법</div>
+</div>
+
+<!-- 6 -->
+<div class="pattern-card c6">
+  <div class="pattern-header">
+    <div class="pattern-num-title">
+      <div class="pattern-num">6</div>
+      <div class="pattern-title">〜は だれの Nですか。/ 〜は〜のです。</div>
+    </div>
+    <div class="pattern-kr">~은 누구의 ~입니까? / ~의 것입니다</div>
+  </div>
+  <div class="example">
+    <div class="jp">あれは <span class="key">だれの</span> かばんですか。</div>
+    <div class="kr">저것은 누구의 가방입니까?</div>
+    <div class="arrow">→ 佐藤さんの かばんです。／ 佐藤さんのです。</div>
+    <div class="kr" style="margin-left:16px">사토 씨의 가방입니다. / 사토 씨 것입니다.</div>
+  </div>
+  <div class="note">※ 「の」가 앞에 나온 명사(かばん) 대신 쓰임. 사람 명사는 대신할 수 없음.</div>
+</div>
+
+<!-- 7 -->
+<div class="pattern-card c7">
+  <div class="pattern-header">
+    <div class="pattern-num-title">
+      <div class="pattern-num">7</div>
+      <div class="pattern-title">〜は 〜のじゃ ありません。</div>
+    </div>
+    <div class="pattern-kr">~은 ~의 것이 아닙니다</div>
+  </div>
+  <div class="example">
+    <div class="jp">これは わたし<span class="key">のじゃ ありません</span>。</div>
+    <div class="kr">이것은 제 것이 아닙니다.</div>
+  </div>
+  <div class="note">※ 격식체: 〜のでは ありません</div>
+</div>
+
+<!-- 8 -->
+<div class="pattern-card c8">
+  <div class="pattern-header">
+    <div class="pattern-num-title">
+      <div class="pattern-num">8</div>
+      <div class="pattern-title">そうです / ちがいます</div>
+    </div>
+    <div class="pattern-kr">그렇습니다 / 아닙니다</div>
+  </div>
+  <div class="example">
+    <div class="jp">それは 辞書ですか。</div>
+    <div class="kr">그것은 사전입니까?</div>
+    <div class="arrow">→ はい、<span class="key" style="color:#c0392b">そうです</span>。／ いいえ、<span class="key" style="color:#c0392b">ちがいます</span>。</div>
+    <div class="kr" style="margin-left:16px">네, 그렇습니다. / 아니요, 아닙니다.</div>
+  </div>
+  <div class="note">※ 부정 대답으로 「そうじゃありません」은 잘 쓰지 않음. 「ちがいます」또는 직접 답변.</div>
+</div>
+
+<!-- 섹션 2: 핵심 표현 -->
+<div class="section-header">
+  <div class="section-num orange">2</div>
+  <div class="section-title">핵심 표현 (重要表現)</div>
+</div>
+
+<div class="expr-grid">
+  <div class="expr-card e1">
+    <div class="expr-jp">あのう、これ、お土産です。</div>
+    <div class="expr-ruby">あのう、これ、おみやげです</div>
+    <div class="expr-kr">저기, 이거 선물입니다.</div>
+  </div>
+  <div class="expr-card e2">
+    <div class="expr-jp">えっ、何ですか。</div>
+    <div class="expr-ruby">えっ、なんですか</div>
+    <div class="expr-kr">네? 무엇입니까?<br><span style="font-size:11px;color:#999">※ 뜻밖의 말을 들었을 때</span></div>
+  </div>
+  <div class="expr-card e3">
+    <div class="expr-jp">どうぞ。</div>
+    <div class="expr-ruby">どうぞ</div>
+    <div class="expr-kr">자, 받으세요.<br><span style="font-size:11px;color:#999">※ 무언가를 권할 때</span></div>
+  </div>
+  <div class="expr-card e4">
+    <div class="expr-jp">[どうも] ありがとう [ございます]。</div>
+    <div class="expr-ruby">どうも ありがとう ございます</div>
+    <div class="expr-kr">[정말] 감사합니다.</div>
+  </div>
+  <div class="expr-card e5">
+    <div class="expr-jp">そうですか。</div>
+    <div class="expr-ruby">そうですか</div>
+    <div class="expr-kr">그렇습니까?<br><span style="font-size:11px;color:#999">※ 새 정보를 알았을 때. 하강조.</span></div>
+  </div>
+  <div class="expr-card e6">
+    <div class="expr-jp">ちがいます。</div>
+    <div class="expr-ruby">ちがいます</div>
+    <div class="expr-kr">아닙니다.<br><span style="font-size:11px;color:#999">※ 부드러운 부정 표현</span></div>
+  </div>
+</div>
+
+<!-- 섹션 3: 조사 정리 -->
+<div class="section-header">
+  <div class="section-num green">3</div>
+  <div class="section-title">조사 정리 (助詞まとめ)</div>
+</div>
+
+<table class="particle-table">
+  <thead>
+    <tr>
+      <th style="width:60px">조사</th>
+      <th style="width:120px">의미</th>
+      <th>예문</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><div class="p-char">は</div></td>
+      <td><div class="p-meaning">~은/는</div><div class="p-note">주제 제시</div></td>
+      <td><div class="p-example">これ<b>は</b> 辞書です。</div></td>
+    </tr>
+    <tr>
+      <td><div class="p-char">の</div></td>
+      <td><div class="p-meaning">~의</div><div class="p-note">소속·소유·관련</div></td>
+      <td><div class="p-example">わたし<b>の</b> かばん / コンピューター<b>の</b> 本</div></td>
+    </tr>
+    <tr>
+      <td><div class="p-char">か</div></td>
+      <td><div class="p-meaning">~입니까?</div><div class="p-note">의문</div></td>
+      <td><div class="p-example">これは 本です<b>か</b>。</div></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="footer">みんなの日本語 初級Ⅰ · 第2課 これから お世話に なります</div>
+
+</body>
+</html>
