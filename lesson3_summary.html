@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>민나노 일본어 3과 정리</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+  :root {
+    --primary: #2d6a4f;
+    --primary-light: #52b788;
+    --accent: #f4a261;
+    --bg: #f8f9f4;
+    --card-bg: #ffffff;
+    --text: #1b1b1b;
+    --text-light: #555;
+    --border: #d8e8d8;
+    --tag-bg: #d8f3dc;
+    --tag-text: #1b4332;
+    --example-bg: #f0f7f0;
+    --note-bg: #fff8ee;
+    --note-border: #f4a261;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 24px 16px 60px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  /* 헤더 */
+  .header {
+    text-align: center;
+    margin-bottom: 32px;
+    padding: 28px 20px;
+    background: var(--primary);
+    border-radius: 16px;
+    color: white;
+  }
+  .header .subtitle {
+    font-size: 13px;
+    opacity: 0.75;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .header .jp-title {
+    font-size: 15px;
+    opacity: 0.85;
+    font-weight: 300;
+  }
+
+  /* 섹션 제목 */
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 32px 0 16px;
+  }
+  .section-num {
+    background: var(--primary);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .section-title h2 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  /* 카드 */
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 14px;
+  }
+
+  /* 문형 번호 + 패턴 */
+  .pattern-num {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--primary-light);
+    margin-bottom: 6px;
+    letter-spacing: 0.05em;
+  }
+  .pattern {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 4px;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  .pattern-ko {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 14px;
+  }
+
+  /* 예문 */
+  .example {
+    background: var(--example-bg);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+  }
+  .example .jp {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+  .example .ko {
+    font-size: 13px;
+    color: var(--text-light);
+  }
+  .example .reply {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed var(--border);
+  }
+
+  /* 참고 */
+  .note {
+    background: var(--note-bg);
+    border-left: 3px solid var(--note-border);
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--text-light);
+  }
+  .note strong { color: var(--text); }
+
+  /* 일람표 */
+  .table-wrap { overflow-x: auto; margin-top: 4px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  th {
+    background: var(--primary);
+    color: white;
+    padding: 10px 12px;
+    text-align: center;
+    font-weight: 500;
+  }
+  td {
+    padding: 10px 12px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: var(--example-bg); }
+  .row-label {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    color: var(--text-light);
+    text-align: left;
+    font-weight: 500;
+  }
+  .do-col { color: #aaa; font-style: italic; }
+
+  /* 표현 카드 */
+  .expr-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  @media (max-width: 480px) {
+    .expr-grid { grid-template-columns: 1fr; }
+  }
+  .expr-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+  }
+  .expr-card .jp {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 2px;
+  }
+  .expr-card .ko {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 6px;
+  }
+  .expr-card .desc {
+    font-size: 12px;
+    color: var(--text-light);
+    border-top: 1px solid var(--border);
+    padding-top: 6px;
+  }
+
+  /* 조사 표 */
+  .particle-table table { font-size: 14px; }
+  .particle-table td:first-child {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+    text-align: center;
+    width: 48px;
+  }
+
+  /* 푸터 */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 40px;
+  }
+
+  /* お~ 접두사 */
+  .prefix-examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .prefix-tag {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="subtitle">みんなの日本語 初級Ⅰ · 第3課</div>
+  <h1>これを ください — 문형 & 표현 정리</h1>
+  <div class="jp-title">ここは どこですか。</div>
+</div>
+
+<!-- 섹션 1: 문형 패턴 -->
+<div class="section-title">
+  <div class="section-num">1</div>
+  <h2>문형 패턴 (文型パターン)</h2>
+</div>
+
+<!-- 문형 1 -->
+<div class="card">
+  <div class="pattern-num">문형 1</div>
+  <div class="pattern">명사は 장소です。</div>
+  <div class="pattern-ko">~은/는 ~에 있습니다</div>
+  <div class="example">
+    <div class="jp">お手洗いは あそこです。</div>
+    <div class="ko">화장실은 저기입니다.</div>
+  </div>
+  <div class="example">
+    <div class="jp">電話は 2階です。</div>
+    <div class="ko">전화는 2층에 있습니다.</div>
+  </div>
+  <div class="example">
+    <div class="jp">山田さんは 事務所です。</div>
+    <div class="ko">야마다 씨는 사무실에 있습니다.</div>
+  </div>
+  <div class="note">※ 사물·장소·사람 모두 사용 가능. 「います/あります」 없이 장소만으로 표현.</div>
+</div>
+
+<!-- 문형 2 -->
+<div class="card">
+  <div class="pattern-num">문형 2</div>
+  <div class="pattern">〜は どこですか。／ どちらですか。</div>
+  <div class="pattern-ko">~은 어디입니까? (정중: 어느 쪽입니까?)</div>
+  <div class="example">
+    <div class="jp">トイレは どこですか。</div>
+    <div class="ko">화장실은 어디입니까?</div>
+    <div class="reply">
+      <div class="jp">……あそこです。</div>
+      <div class="ko">저기입니다.</div>
+    </div>
+  </div>
+  <div class="example">
+    <div class="jp">事務所は どちらですか。</div>
+    <div class="ko">사무실은 어느 쪽입니까?</div>
+    <div class="reply">
+      <div class="jp">……あちらです。</div>
+      <div class="ko">저쪽입니다.</div>
+    </div>
+  </div>
+  <div class="example">
+    <div class="jp">[お]国は どちらですか。</div>
+    <div class="ko">나라는 어디십니까?</div>
+    <div class="reply">
+      <div class="jp">……アメリカです。</div>
+      <div class="ko">미국입니다.</div>
+    </div>
+  </div>
+  <div class="note">※ <strong>どちら</strong>가 どこ보다 정중. 나라·회사·소속 물을 때도 どちら를 씀.</div>
+</div>
+
+<!-- 문형 3 -->
+<div class="card">
+  <div class="pattern-num">문형 3</div>
+  <div class="pattern">それは どこの Nですか。</div>
+  <div class="pattern-ko">그것은 어느 나라/회사의 ~입니까?</div>
+  <div class="example">
+    <div class="jp">それは どこの 靴ですか。</div>
+    <div class="ko">그것은 어느 나라 구두입니까?</div>
+    <div class="reply">
+      <div class="jp">……イタリアの 靴です。</div>
+      <div class="ko">이탈리아 구두입니다.</div>
+    </div>
+  </div>
+  <div class="example">
+    <div class="jp">この 時計は いくらですか。</div>
+    <div class="ko">이 시계는 얼마입니까?</div>
+    <div class="reply">
+      <div class="jp">……18,600円です。</div>
+      <div class="ko">18,600엔입니다.</div>
+    </div>
+  </div>
+  <div class="note">※ <strong>명사1の 명사2</strong> — の가 출처·소속을 나타냄. 「이탈리아産 구두」의 느낌.</div>
+</div>
+
+<!-- 섹션 2: こ/そ/あ/ど 일람표 -->
+<div class="section-title">
+  <div class="section-num">2</div>
+  <h2>こ／そ／あ／ど 지시사 일람표</h2>
+</div>
+
+<div class="card">
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align:left;">구분</th>
+          <th>こ 계열<br><small>화자 쪽</small></th>
+          <th>そ 계열<br><small>청자 쪽</small></th>
+          <th>あ 계열<br><small>둘 다에서 멀리</small></th>
+          <th class="do-col">ど 계열<br><small>의문</small></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label">사물</td>
+          <td>これ</td>
+          <td>それ</td>
+          <td>あれ</td>
+          <td class="do-col">どれ</td>
+        </tr>
+        <tr>
+          <td class="row-label">사물+명사</td>
+          <td>この N</td>
+          <td>その N</td>
+          <td>あの N</td>
+          <td class="do-col">どの N</td>
+        </tr>
+        <tr>
+          <td class="row-label">장소</td>
+          <td>ここ</td>
+          <td>そこ</td>
+          <td>あそこ</td>
+          <td class="do-col">どこ</td>
+        </tr>
+        <tr>
+          <td class="row-label">방향(정중)</td>
+          <td>こちら</td>
+          <td>そちら</td>
+          <td>あちら</td>
+          <td class="do-col">どちら</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note" style="margin-top:14px;">
+    ※ <strong>こちら/そちら/あちら</strong>는 방향을 나타내며 장소를 가리킬 때도 사용. ここ/そこ/あそこ보다 정중한 표현.<br>
+    ※ <strong>どちら</strong>는 「どこ」보다 정중. 나라·소속 물을 때 선호.
+  </div>
+</div>
+
+<!-- 섹션 3: お~ 접두사 -->
+<div class="section-title">
+  <div class="section-num">3</div>
+  <h2>お〜 접두사</h2>
+</div>
+
+<div class="card">
+  <div class="pattern-ko">청자나 제삼자에 관한 사물에 붙여 화자의 경의를 나타냄</div>
+  <div class="prefix-examples">
+    <span class="prefix-tag">おてあらい</span>
+    <span class="prefix-tag">おくに</span>
+    <span class="prefix-tag">おみやげ</span>
+    <span class="prefix-tag">おなまえ</span>
+    <span class="prefix-tag">おしごと</span>
+  </div>
+  <div class="note" style="margin-top:14px;">
+    ※ <strong>굳어진 것</strong>: おてあらい、おみやげ처럼 お 없이는 어색한 것도 있음.<br>
+    ※ <strong>경의 용법</strong>: 상대방 관련 사물에 붙여 정중함을 더함. 나중에 배울 경어(敬語)의 기초!
+  </div>
+</div>
+
+<!-- 섹션 4: 핵심 표현 -->
+<div class="section-title">
+  <div class="section-num">4</div>
+  <h2>핵심 표현 (重要表現)</h2>
+</div>
+
+<div class="expr-grid">
+  <div class="expr-card">
+    <div class="jp">すみません</div>
+    <div class="ko">저기요 / 죄송합니다</div>
+    <div class="desc">말 걸기, 부탁, 사과, 감사 — 상황에 따라 다양하게 사용</div>
+  </div>
+  <div class="expr-card">
+    <div class="jp">どうも</div>
+    <div class="ko">고마워요 / 수고요</div>
+    <div class="desc">가볍게 감사·인사를 전할 때. どうもありがとうございます의 줄임</div>
+  </div>
+  <div class="expr-card">
+    <div class="jp">〜を 見せてください</div>
+    <div class="ko">~을 보여주세요</div>
+    <div class="desc">ください 앞에 동사가 붙은 첫 등장! 나중에 동사 배울 때 연결됨</div>
+  </div>
+  <div class="expr-card">
+    <div class="jp">いくらですか</div>
+    <div class="ko">얼마입니까?</div>
+    <div class="desc">쇼핑 필수 표현. 큰 숫자(百·千·万) 읽기 연습과 함께</div>
+  </div>
+  <div class="expr-card">
+    <div class="jp">じゃ、〜をください</div>
+    <div class="ko">그럼, ~을 주세요</div>
+    <div class="desc">じゃ는 では의 구어체. 회화에서 자주 등장하는 자연스러운 표현</div>
+  </div>
+  <div class="expr-card">
+    <div class="jp">はい、どうぞ</div>
+    <div class="ko">네, 여기 있습니다</div>
+    <div class="desc">물건을 건넬 때. どうぞ 단독으로도 사용 가능</div>
+  </div>
+</div>
+
+<!-- 섹션 5: 조사 정리 -->
+<div class="section-title">
+  <div class="section-num">5</div>
+  <h2>조사 정리 (助詞まとめ)</h2>
+</div>
+
+<div class="card particle-table">
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:48px;">조사</th>
+          <th>의미</th>
+          <th>예문</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>は</td>
+          <td>~은/는 · 주제 제시</td>
+          <td style="text-align:left; font-family:'Noto Sans JP',sans-serif;">トイレ<strong>は</strong> あそこです。</td>
+        </tr>
+        <tr>
+          <td>の</td>
+          <td>~의 · 소속·출처</td>
+          <td style="text-align:left; font-family:'Noto Sans JP',sans-serif;">イタリア<strong>の</strong> 靴</td>
+        </tr>
+        <tr>
+          <td>を</td>
+          <td>~을/를 · 목적어</td>
+          <td style="text-align:left; font-family:'Noto Sans JP',sans-serif;">これ<strong>を</strong> ください。</td>
+        </tr>
+        <tr>
+          <td>か</td>
+          <td>~입니까? · 의문</td>
+          <td style="text-align:left; font-family:'Noto Sans JP',sans-serif;">どこです<strong>か</strong>。</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note" style="margin-top:12px;">
+    ※ <strong>を</strong>가 3과에서 처음 등장! 「これをください」에서 목적어 표시.
+  </div>
+</div>
+
+<div class="footer">
+  みんなの日本語 初級Ⅰ · 第3課 これを ください
+</div>
+
+</body>
+</html>
