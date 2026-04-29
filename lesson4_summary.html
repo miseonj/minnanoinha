@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>민나노 일본어 4과 정리</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+:root {
+  --primary: #2d6a4f;
+  --primary-light: #52b788;
+  --accent: #f4a261;
+  --bg: #f8f9f4;
+  --card-bg: #ffffff;
+  --text: #1b1b1b;
+  --text-light: #555;
+  --border: #d8e8d8;
+  --tag-bg: #d8f3dc;
+  --tag-text: #1b4332;
+  --example-bg: #f0f7f0;
+  --note-bg: #fff8ee;
+  --note-border: #f4a261;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  padding: 24px 16px 60px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* 헤더 */
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+  padding: 28px 20px;
+  background: var(--primary);
+  border-radius: 16px;
+  color: white;
+}
+.header .subtitle {
+  font-size: 13px;
+  opacity: 0.75;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+.header h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.header .jp-title {
+  font-size: 15px;
+  opacity: 0.85;
+  font-weight: 300;
+}
+
+/* 섹션 제목 */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 32px 0 16px;
+}
+.section-num {
+  background: var(--primary);
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.section-title h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* 카드 */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 14px;
+}
+
+/* 문형 번호 + 패턴 */
+.pattern-num {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary-light);
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+.pattern {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 4px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.pattern-ko {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-bottom: 14px;
+}
+
+/* 예문 */
+.example {
+  background: var(--example-bg);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+}
+.example .jp {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 15px;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+.example .ko {
+  font-size: 13px;
+  color: var(--text-light);
+}
+.example .reply {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+}
+
+/* 참고 */
+.note {
+  background: var(--note-bg);
+  border-left: 3px solid var(--note-border);
+  border-radius: 0 8px 8px 0;
+  padding: 10px 14px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--text-light);
+}
+.note strong { color: var(--text); }
+
+/* 일람표 */
+.table-wrap { overflow-x: auto; margin-top: 4px; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+th {
+  background: var(--primary);
+  color: white;
+  padding: 10px 12px;
+  text-align: center;
+  font-weight: 500;
+}
+td {
+  padding: 10px 12px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  font-family: 'Noto Sans JP', sans-serif;
+}
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: var(--example-bg); }
+.row-label {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 13px;
+  color: var(--text-light);
+  text-align: left;
+  font-weight: 500;
+}
+
+/* 활용 표 강조 */
+.conj-positive { color: #2d6a4f; font-weight: 700; }
+.conj-negative { color: #c0392b; font-weight: 700; }
+
+/* 태그 */
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.tag {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+.tag-no {
+  background: #fde8e8;
+  color: #7b2020;
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* 조사 표 */
+.particle-table td:first-child {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  text-align: center;
+  width: 48px;
+}
+
+/* 푸터 */
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 40px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="subtitle">みんなの日本語 初級Ⅰ · 第4課</div>
+  <h1>そちらは 何時までですか — 문형 & 표현 정리</h1>
+  <div class="jp-title">今 何時ですか。</div>
+</div>
+
+<!-- 섹션 1: 시각 읽기 -->
+<div class="section-title">
+  <div class="section-num">1</div>
+  <h2>문형 1 — 今 何時何分ですか</h2>
+</div>
+
+<div class="card">
+  <div class="pattern-num">문형 1</div>
+  <div class="pattern">今 何時何分ですか。</div>
+  <div class="pattern-ko">지금 몇 시 몇 분입니까?</div>
+
+  <div class="example">
+    <div class="jp">今 何時ですか。</div>
+    <div class="ko">지금 몇 시입니까?</div>
+    <div class="reply">
+      <div class="jp">……7時10分です。</div>
+      <div class="ko">7시 10분입니다.</div>
+    </div>
+  </div>
+
+  <div class="example">
+    <div class="jp">ニューヨークは 今 何時ですか。</div>
+    <div class="ko">뉴욕은 지금 몇 시입니까?</div>
+    <div class="reply">
+      <div class="jp">……午前 0時10分です。</div>
+      <div class="ko">오전 0시 10분입니다.</div>
+    </div>
+  </div>
+
+  <div class="note">
+    ※ <strong>분(分) 읽기 주의</strong><br>
+    ふん: 2·5·7·9分　　ぷん: 1·3·4·6·8·10分<br>
+    ※ 반(半): 6時半 = 6시 30분<br>
+    ※ 오전·오후: 午前(ごぜん)／午後(ごご)
+  </div>
+</div>
+
+<!-- 섹션 2: ます형 4활용 -->
+<div class="section-title">
+  <div class="section-num">2</div>
+  <h2>문형 2 — 동사ます / ません / ました / ませんでした</h2>
+</div>
+
+<div class="card">
+  <div class="pattern-num">문형 2</div>
+  <div class="pattern">동사ます형 활용</div>
+  <div class="pattern-ko">현재·미래 / 과거 × 긍정 / 부정</div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align:left;">구분</th>
+          <th>현재·미래</th>
+          <th>과거</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label">긍정</td>
+          <td class="conj-positive">おきます</td>
+          <td class="conj-positive">おきました</td>
+        </tr>
+        <tr>
+          <td class="row-label">부정</td>
+          <td class="conj-negative">おきません</td>
+          <td class="conj-negative">おきませんでした</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="example" style="margin-top:14px;">
+    <div class="jp">わたしは 毎日 勉強します。</div>
+    <div class="ko">저는 매일 공부합니다.</div>
+  </div>
+  <div class="example">
+    <div class="jp">きのう 勉強しましたか。</div>
+    <div class="ko">어제 공부했습니까?</div>
+    <div class="reply">
+      <div class="jp">……はい、勉強しました。／いいえ、勉強しませんでした。</div>
+      <div class="ko">네, 공부했습니다. / 아니요, 공부하지 않았습니다.</div>
+    </div>
+  </div>
+
+  <div class="note">
+    ※ 의문문은 어순 그대로 끝에 「か」만 붙임.<br>
+    ※ 답변은 동사를 그대로 반복. 「そうです」는 사용 불가.
+  </div>
+</div>
+
+<!-- 섹션 3: 명사(시간)に 동사 -->
+<div class="section-title">
+  <div class="section-num">3</div>
+  <h2>문형 3 — 명사(시간)に 동사</h2>
+</div>
+
+<div class="card">
+  <div class="pattern-num">문형 3</div>
+  <div class="pattern">명사(시간)に 동사ます</div>
+  <div class="pattern-ko">~에 (동작을 합니다) — 시점 표시</div>
+
+  <div class="example">
+    <div class="jp">わたしは 毎朝 6時に 起きます。</div>
+    <div class="ko">저는 매일 아침 6시에 일어납니다.</div>
+  </div>
+  <div class="example">
+    <div class="jp">毎晩 何時に 寝ますか。</div>
+    <div class="ko">매일 밤 몇 시에 잡니까?</div>
+    <div class="reply">
+      <div class="jp">……11時に 寝ます。</div>
+      <div class="ko">11시에 잡니다.</div>
+    </div>
+  </div>
+
+  <div style="margin-top:14px;">
+    <div style="font-size:13px; font-weight:700; color:var(--primary); margin-bottom:8px;">に를 붙이는 것</div>
+    <div class="tag-group">
+      <span class="tag">시각 (6時に)</span>
+      <span class="tag">날짜 (7月2日に)</span>
+      <span class="tag">요일 (日曜日に)</span>
+    </div>
+  </div>
+
+  <div style="margin-top:14px;">
+    <div style="font-size:13px; font-weight:700; color:#c0392b; margin-bottom:8px;">に를 붙이지 않는 것</div>
+    <div class="tag-group">
+      <span class="tag-no">きょう</span>
+      <span class="tag-no">あした</span>
+      <span class="tag-no">きのう</span>
+      <span class="tag-no">けさ</span>
+      <span class="tag-no">まいにち</span>
+      <span class="tag-no">まいあさ</span>
+      <span class="tag-no">まいばん</span>
+      <span class="tag-no">いつも</span>
+    </div>
+  </div>
+
+  <div class="note">
+    ※ 「きょう・あした」등은 그 자체가 이미 시점을 특정하므로 に 불필요.
+  </div>
+</div>
+
+<!-- 섹션 4: から～まで -->
+<div class="section-title">
+  <div class="section-num">4</div>
+  <h2>문형 4 — 名詞1から 名詞2まで</h2>
+</div>
+
+<div class="card">
+  <div class="pattern-num">문형 4</div>
+  <div class="pattern">名詞1から 名詞2まで</div>
+  <div class="pattern-ko">~부터 ~까지 (시간·장소의 시작점과 끝점)</div>
+
+  <div class="example">
+    <div class="jp">アップル銀行は 何時から 何時までですか。</div>
+    <div class="ko">애플은행은 몇 시부터 몇 시까지입니까?</div>
+    <div class="reply">
+      <div class="jp">……9時から 3時までです。</div>
+      <div class="ko">9시부터 3시까지입니다.</div>
+    </div>
+  </div>
+  <div class="example">
+    <div class="jp">毎日 何時から 何時まで 勉強しますか。</div>
+    <div class="ko">매일 몇 시부터 몇 시까지 공부합니까?</div>
+    <div class="reply">
+      <div class="jp">……朝 9時から 午後 3時まで 勉強します。</div>
+      <div class="ko">아침 9시부터 오후 3시까지 공부합니다.</div>
+    </div>
+  </div>
+  <div class="example">
+    <div class="jp">毎日 10時まで 勉強します。</div>
+    <div class="ko">매일 10시까지 공부합니다.</div>
+  </div>
+
+  <div class="note">
+    ※ から와 まで는 반드시 함께 쓸 필요 없음. 따로 사용도 가능.<br>
+    ※ 「～から～まで」의 끝에는 「です」를 붙여 명사문 형태로도 사용.
+  </div>
+</div>
+
+<!-- 섹션 5: 名詞1と名詞2 -->
+<div class="section-title">
+  <div class="section-num">5</div>
+  <h2>문형 5 — 名詞1と 名詞2</h2>
+</div>
+
+<div class="card">
+  <div class="pattern-num">문형 5</div>
+  <div class="pattern">名詞1と 名詞2</div>
+  <div class="pattern-ko">~와/과 ~ (명사 나열)</div>
+
+  <div class="example">
+    <div class="jp">休みは 何曜日ですか。</div>
+    <div class="ko">휴일은 무슨 요일입니까?</div>
+    <div class="reply">
+      <div class="jp">……土曜日と 日曜日です。</div>
+      <div class="ko">토요일과 일요일입니다.</div>
+    </div>
+  </div>
+
+  <div class="note">
+    ※ 명사와 명사를 연결할 때만 사용. 동사·형용사에는 사용 불가.
+  </div>
+</div>
+
+<!-- 섹션 6: ～ね -->
+<div class="section-title">
+  <div class="section-num">6</div>
+  <h2>문형 6 — ～ね</h2>
+</div>
+
+<div class="card">
+  <div class="pattern-num">문형 6</div>
+  <div class="pattern">～ね</div>
+  <div class="pattern-ko">~네요 / ~죠? (확인·동의 요청)</div>
+
+  <div class="example">
+    <div class="jp">毎日 10時まで 勉強します。</div>
+    <div class="ko">매일 10시까지 공부합니다.</div>
+    <div class="reply">
+      <div class="jp">……大変ですね。</div>
+      <div class="ko">힘들겠네요.</div>
+    </div>
+  </div>
+  <div class="example">
+    <div class="jp">山田さんの 電話番号は 871の 6813です。</div>
+    <div class="ko">야마다 씨의 전화번호는 871의 6813입니다.</div>
+    <div class="reply">
+      <div class="jp">……871の 6813ですね。</div>
+      <div class="ko">871의 6813이죠?</div>
+    </div>
+  </div>
+
+  <div class="note">
+    ※ 문장 끝에 붙여 "그렇군요 / 맞죠?" 뉘앙스.<br>
+    ※ 한국어 「~네요 / ~죠?」와 유사. 상대의 동의·확인을 기대할 때 사용.
+  </div>
+</div>
+
+<!-- 섹션 7: 조사 정리 -->
+<div class="section-title">
+  <div class="section-num">7</div>
+  <h2>조사 정리 (助詞まとめ)</h2>
+</div>
+
+<div class="card particle-table">
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:48px;">조사</th>
+          <th>의미</th>
+          <th>예문</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>を</td>
+          <td>~을/를 · 목적어</td>
+          <td style="text-align:left;">コーヒー<strong>を</strong> 飲みます。</td>
+        </tr>
+        <tr>
+          <td>に</td>
+          <td>~에 · 시점</td>
+          <td style="text-align:left;">6時<strong>に</strong> 起きます。</td>
+        </tr>
+        <tr>
+          <td>から</td>
+          <td>~부터 · 시작점</td>
+          <td style="text-align:left;">9時<strong>から</strong> 働きます。</td>
+        </tr>
+        <tr>
+          <td>まで</td>
+          <td>~까지 · 끝점</td>
+          <td style="text-align:left;">5時<strong>まで</strong> 勉強します。</td>
+        </tr>
+        <tr>
+          <td>と</td>
+          <td>~와/과 · 나열</td>
+          <td style="text-align:left;">土曜日<strong>と</strong> 日曜日です。</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note" style="margin-top:12px;">
+    ※ <strong>を · に</strong>는 4과에서 본격 등장! 동사와 함께 쓰임에 주목.
+  </div>
+</div>
+
+<div class="footer">
+  みんなの日本語 初級Ⅰ · 第4課 そちらは 何時までですか
+</div>
+
+</body>
+</html>
