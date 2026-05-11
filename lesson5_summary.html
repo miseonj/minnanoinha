@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>민나노 일본어 5과 정리</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+:root {
+  --primary: #2d6a4f;
+  --primary-light: #52b788;
+  --accent: #f4a261;
+  --bg: #f8f9f4;
+  --card-bg: #ffffff;
+  --text: #1b1b1b;
+  --text-light: #555;
+  --border: #d8e8d8;
+  --tag-bg: #d8f3dc;
+  --tag-text: #1b4332;
+  --example-bg: #f0f7f0;
+  --note-bg: #fff8ee;
+  --note-border: #f4a261;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  padding: 24px 16px 60px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+  padding: 28px 20px;
+  background: var(--primary);
+  border-radius: 16px;
+  color: white;
+}
+.header .subtitle {
+  font-size: 13px;
+  opacity: 0.75;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+.header h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.header .jp-title {
+  font-size: 15px;
+  opacity: 0.85;
+  font-weight: 300;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 32px 0 16px;
+}
+.section-num {
+  background: var(--primary);
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.section-title h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 14px;
+}
+
+.pattern-num {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary-light);
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+.pattern {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 4px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.pattern-ko {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-bottom: 14px;
+}
+
+.example {
+  background: var(--example-bg);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+}
+.example .jp {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 15px;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+.example .ko {
+  font-size: 13px;
+  color: var(--text-light);
+}
+.example .reply {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+}
+
+.note {
+  background: var(--note-bg);
+  border-left: 3px solid var(--note-border);
+  border-radius: 0 8px 8px 0;
+  padding: 10px 14px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--text-light);
+}
+.note strong { color: var(--text); }
+
+.table-wrap { overflow-x: auto; margin-top: 4px; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+th {
+  background: var(--primary);
+  color: white;
+  padding: 10px 12px;
+  text-align: center;
+  font-weight: 500;
+}
+td {
+  padding: 10px 12px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  font-family: 'Noto Sans JP', sans-serif;
+}
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: var(--example-bg); }
+.row-label {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 13px;
+  color: var(--text-light);
+  text-align: left;
+  font-weight: 500;
+}
+
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.tag {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+.tag-no {
+  background: #fde8e8;
+  color: #7b2020;
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.particle-table td:first-child {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  text-align: center;
+  width: 48px;
+}
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 40px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="subtitle">みんなの日本語 初級Ⅰ · 第5課</div>
+  <h1>この 電車は 甲子園へ 行きますか — 문형 & 표현 정리</h1>
+
+</div>
+
+<!-- 섹션 1 -->
+<div class="section-title">
+  <div class="section-num">1</div>
+  <h2>문형 1 — 명사(장소)へ 行きます／来ます／帰ります</h2>
+</div>
+
+<div class="card">
+  <div class="pattern-num">문형 1</div>
+  <div class="pattern">名詞(장소)へ 行きます／来ます／帰ります</div>
+  <div class="pattern-ko">~로/에 갑니다 / 옵니다 / 돌아갑니다 — 이동 방향 표시</div>
+
+  <div class="example">
+    <div class="jp">わたしは 京都へ 行きます。</div>
+    <div class="ko">저는 교토에 갑니다.</div>
+  </div>
+  <div class="example">
+    <div class="jp">日本へ 来ました。</div>
+    <div class="ko">일본에 왔습니다.</div>
+  </div>
+  <div class="example">
+    <div class="jp">うちへ 帰ります。</div>
+    <div class="ko">집으로 돌아갑니다.</div>
+  </div>
+  <div class="example">
+    <div class="jp">あした どこへ 行きますか。</div>
+    <div class="ko">내일 어디에 갑니까?</div>
+    <div class="reply">
+      <div class="jp">……奈良へ 行きます。</div>
+      <div class="ko">나라에 갑니다.</div>
+    </div>
+  </div>
+
+  <div class="note">
+    ※ 조사 「へ」는 「え」로 발음.<br>
+    ※ 어디에도 가지 않을 때 → <strong>どこへも 行きません</strong> (문형 2 참조)
+  </div>
+</div>
+
+<!-- 섹션 2 -->
+<div class="section-title">
+  <div class="section-num">2</div>
+  <h2>문형 2 — どこ[へ]も 行きません／行きませんでした</h2>
+</div>
+
+<div class="card">
+  <div class="pattern-num">문형 2</div>
+  <div class="pattern">どこ[へ]も 行きません</div>
+  <div class="pattern-ko">아무 데도 가지 않습니다 — 의문사 + も + 부정형</div>
+
+  <div class="example">
+    <div class="jp">日曜日 どこへ 行きましたか。</div>
+    <div class="ko">일요일에 어디에 갔습니까?</div>
+    <div class="reply">
+      <div class="jp">……どこ[へ]も 行きませんでした。</div>
+      <div class="ko">아무 데도 가지 않았습니다.</div>
+    </div>
+  </div>
+  <div class="example">
+    <div class="jp">何も 食べません。</div>
+    <div class="ko">아무것도 먹지 않습니다.</div>
+  </div>
+  <div class="example">
+    <div class="jp">だれも 来ませんでした。</div>
+    <div class="ko">아무도 오지 않았습니다.</div>
+  </div>
+
+  <div style="margin-top:14px;">
+    <div style="font-size:13px; font-weight:700; color:var(--primary); margin-bottom:8px;">의문사 + も + 부정 세트</div>
+    <div class="tag-group">
+      <span class="tag">どこ(へ)も + 行きません</span>
+      <span class="tag">だれも + 来ません</span>
+      <span class="tag">何も + 食べません</span>
+    </div>
+  </div>
+
+  <div class="note">
+    ※ 반드시 <strong>부정형</strong>과 세트로 사용. 긍정형과는 쓸 수 없음.<br>
+    ※ 「へ」는 생략 가능 → どこも 行きません도 OK.
+  </div>
+</div>
+
+<!-- 섹션 3 -->
+<div class="section-title">
+  <div class="section-num">3</div>
+  <h2>문형 3 — 명사(탈것)で 行きます／来ます／帰ります</h2>
+</div>
+
+<div class="card">
+  <div class="pattern-num">문형 3</div>
+  <div class="pattern">名詞(탈것)で 行きます</div>
+  <div class="pattern-ko">~로/으로 갑니다 — 교통수단 표시</div>
+
+  <div class="example">
+    <div class="jp">電車で 行きます。</div>
+    <div class="ko">전철로 갑니다.</div>
+  </div>
+  <div class="example">
+    <div class="jp">タクシーで 来ました。</div>
+    <div class="ko">택시로 왔습니다.</div>
+  </div>
+  <div class="example">
+    <div class="jp">何で 東京へ 行きますか。</div>
+    <div class="ko">무엇으로 도쿄에 갑니까?</div>
+    <div class="reply">
+      <div class="jp">……新幹線で 行きます。</div>
+      <div class="ko">신칸센으로 갑니다.</div>
+    </div>
+  </div>
+  <div class="example">
+    <div class="jp">駅から 歩いて 帰りました。</div>
+    <div class="ko">역에서 걸어서 돌아왔습니다.</div>
+  </div>
+
+  <div class="note">
+    ※ <strong>걸어서 이동</strong>할 때는 「歩いて」를 사용. 이 경우 조사 「で」는 붙이지 않음.<br>
+    ※ 「一人で」(혼자서) — 단독 행동을 나타낼 때도 「で」를 사용. 이때 「と」는 쓰지 않음.
+  </div>
+</div>
+
+<!-- 섹션 4 -->
+<div class="section-title">
+  <div class="section-num">4</div>
+  <h2>문형 4 — 명사(사람/동물)と 동사</h2>
+</div>
+
+<div class="card">
+  <div class="pattern-num">문형 4</div>
+  <div class="pattern">名詞(사람/동물)と 동사</div>
+  <div class="pattern-ko">~와/과 (함께) ~합니다 — 동반자 표시</div>
+
+  <div class="example">
+    <div class="jp">家族と 日本へ 来ました。</div>
+    <div class="ko">가족과 일본에 왔습니다.</div>
+  </div>
+  <div class="example">
+    <div class="jp">だれと 東京へ 行きますか。</div>
+    <div class="ko">누구와 도쿄에 갑니까?</div>
+    <div class="reply">
+      <div class="jp">……山田さんと 行きます。</div>
+      <div class="ko">야마다 씨와 갑니다.</div>
+    </div>
+  </div>
+  <div class="example">
+    <div class="jp">一人で 東京へ 行きます。</div>
+    <div class="ko">혼자서 도쿄에 갑니다.</div>
+  </div>
+
+  <div class="note">
+    ※ 동반자를 나타낼 때는 「と」, 혼자 행동할 때는 「一人で」.<br>
+    ※ 「と」는 사람·동물에만 사용. 탈것·수단에는 「で」 사용.
+  </div>
+</div>
+
+<!-- 섹션 5 -->
+<div class="section-title">
+  <div class="section-num">5</div>
+  <h2>문형 5 — いつ</h2>
+</div>
+
+<div class="card">
+  <div class="pattern-num">문형 5</div>
+  <div class="pattern">いつ 〜ますか</div>
+  <div class="pattern-ko">언제 ~합니까? — 시간을 묻는 의문사</div>
+
+  <div class="example">
+    <div class="jp">いつ 日本へ 来ましたか。</div>
+    <div class="ko">언제 일본에 왔습니까?</div>
+    <div class="reply">
+      <div class="jp">……3月25日に 来ました。</div>
+      <div class="ko">3월 25일에 왔습니다.</div>
+    </div>
+  </div>
+  <div class="example">
+    <div class="jp">いつ 広島へ 行きますか。</div>
+    <div class="ko">언제 히로시마에 갑니까?</div>
+    <div class="reply">
+      <div class="jp">……来週 行きます。</div>
+      <div class="ko">다음 주에 갑니다.</div>
+    </div>
+  </div>
+  <div class="example">
+    <div class="jp">誕生日は いつですか。</div>
+    <div class="ko">생일은 언제입니까?</div>
+    <div class="reply">
+      <div class="jp">……6月13日です。</div>
+      <div class="ko">6월 13일입니다.</div>
+    </div>
+  </div>
+
+  <div class="note">
+    ※ 「いつ」에는 조사 「に」를 붙이지 않음.<br>
+    ※ 구체적인 날짜·요일로 답할 때는 「に」를 붙임 → 3月25日<strong>に</strong> 来ました.
+  </div>
+</div>
+
+<!-- 섹션 6 -->
+<div class="section-title">
+  <div class="section-num">6</div>
+  <h2>문형 6 — ～よ</h2>
+</div>
+
+<div class="card">
+  <div class="pattern-num">문형 6</div>
+  <div class="pattern">～よ</div>
+  <div class="pattern-ko">~요 / ~거든요 (정보 전달·확신)</div>
+
+  <div class="example">
+    <div class="jp">この 電車は 甲子園へ 行きますか。</div>
+    <div class="ko">이 전철은 고시엔에 갑니까?</div>
+    <div class="reply">
+      <div class="jp">……いいえ、行きません。次の 普通ですよ。</div>
+      <div class="ko">아니요, 가지 않습니다. 다음 완행 열차가 가요.</div>
+    </div>
+  </div>
+  <div class="example">
+    <div class="jp">北海道に 馬が たくさん いますよ。</div>
+    <div class="ko">홋카이도에 말이 많이 있거든요.</div>
+  </div>
+
+  <div class="note">
+    ※ 상대가 <strong>모르는 사실</strong>을 알려주거나, 화자의 판단·의견을 전할 때 사용.<br>
+    ※ 「～ね」(동의·공감 요청)와 구분! 「～よ」는 정보를 <strong>일방향으로 전달</strong>하는 느낌.
+  </div>
+</div>
+
+<!-- 섹션 7 -->
+<div class="section-title">
+  <div class="section-num">7</div>
+  <h2>문형 7 — そうですね</h2>
+</div>
+
+<div class="card">
+  <div class="pattern-num">문형 7</div>
+  <div class="pattern">そうですね</div>
+  <div class="pattern-ko">그렇군요 / 맞아요 (동의·공감)</div>
+
+  <div class="example">
+    <div class="jp">あしたは 日曜日ですね。</div>
+    <div class="ko">내일은 일요일이네요.</div>
+    <div class="reply">
+      <div class="jp">……あ、そうですね。</div>
+      <div class="ko">아, 그렇군요.</div>
+    </div>
+  </div>
+
+  <div class="note">
+    ※ <strong>そうですか</strong>: 처음 듣는 새 정보에 놀라서 납득할 때 → 「そうですか！(그래요?!)」<br>
+    ※ <strong>そうですね</strong>: 화자도 이미 알고 있던 사실에 동의·공감할 때 → 「そうですね(맞아요)」<br>
+    ※ 헷갈리는 포인트! 「ね」는 공유된 정보, 「か」는 새로운 정보.
+  </div>
+</div>
+
+<!-- 섹션 8: 조사 정리 -->
+<div class="section-title">
+  <div class="section-num">8</div>
+  <h2>조사 정리 (助詞まとめ)</h2>
+</div>
+
+<div class="card particle-table">
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:56px;">조사</th>
+          <th>의미</th>
+          <th>예문</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>へ</td>
+          <td>~로/에 · 이동 방향</td>
+          <td style="text-align:left;">京都<strong>へ</strong> 行きます。</td>
+        </tr>
+        <tr>
+          <td>で</td>
+          <td>~로/으로 · 교통수단</td>
+          <td style="text-align:left;">電車<strong>で</strong> 行きます。</td>
+        </tr>
+        <tr>
+          <td>と</td>
+          <td>~와/과 · 동반자</td>
+          <td style="text-align:left;">家族<strong>と</strong> 来ました。</td>
+        </tr>
+        <tr>
+          <td>も</td>
+          <td>~도 · (의문사+も = 전면부정)</td>
+          <td style="text-align:left;">どこ<strong>も</strong> 行きません。</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note" style="margin-top:12px;">
+    ※ <strong>で</strong>의 두 가지 용법 주의: ①교통수단(電車で) ②장소에서의 동작(4과: 図書館で 勉強します)<br>
+    ※ <strong>と</strong>는 사람·동물과 함께할 때, <strong>一人で</strong>는 혼자일 때.
+  </div>
+</div>
+
+<div class="footer">
+  みんなの日本語 初級Ⅰ · 第5課 どこへ 行きますか
+</div>
+
+</body>
+</html>
