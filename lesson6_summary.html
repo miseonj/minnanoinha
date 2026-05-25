@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>민나노 일본어 6과 정리</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+:root {
+  --primary: #2d6a4f;
+  --primary-light: #52b788;
+  --accent: #f4a261;
+  --bg: #f8f9f4;
+  --card-bg: #ffffff;
+  --text: #1b1b1b;
+  --text-light: #555;
+  --border: #d8e8d8;
+  --tag-bg: #d8f3dc;
+  --tag-text: #1b4332;
+  --example-bg: #f0f7f0;
+  --note-bg: #fff8ee;
+  --note-border: #f4a261;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  padding: 24px 16px 60px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+  padding: 28px 20px;
+  background: var(--primary);
+  border-radius: 16px;
+  color: white;
+}
+.header .subtitle {
+  font-size: 13px;
+  opacity: 0.75;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+.header h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.header .jp-title {
+  font-size: 15px;
+  opacity: 0.85;
+  font-weight: 300;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 32px 0 16px;
+}
+.section-num {
+  background: var(--primary);
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.section-title h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 14px;
+}
+
+.pattern-num {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary-light);
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+.pattern {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 4px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.pattern-ko {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-bottom: 14px;
+}
+
+.example {
+  background: var(--example-bg);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+}
+.example .jp {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 15px;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+.example .ko {
+  font-size: 13px;
+  color: var(--text-light);
+}
+.example .reply {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+}
+
+.note {
+  background: var(--note-bg);
+  border-left: 3px solid var(--note-border);
+  border-radius: 0 8px 8px 0;
+  padding: 10px 14px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--text-light);
+}
+.note strong { color: var(--text); }
+
+.table-wrap { overflow-x: auto; margin-top: 4px; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+th {
+  background: var(--primary);
+  color: white;
+  padding: 10px 12px;
+  text-align: center;
+  font-weight: 500;
+}
+td {
+  padding: 10px 12px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  font-family: 'Noto Sans JP', sans-serif;
+}
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: var(--example-bg); }
+.row-label {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 13px;
+  color: var(--text-light);
+  text-align: left;
+  font-weight: 500;
+}
+
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.tag {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.particle-table td:first-child {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  text-align: center;
+  width: 48px;
+}
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 40px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="subtitle">みんなの日本語 初級Ⅰ · 第6課</div>
+  <h1>いっしょに 行きませんか — 문형 & 표현 정리</h1>
+</div>
+
+<!-- 섹션 1 -->
+<div class="section-title">
+  <div class="section-num">1</div>
+  <h2>문형 1 — 명사を 동사</h2>
+</div>
+
+<div class="card">
+  <div class="pattern-num">문형 1</div>
+  <div class="pattern">名詞を 動詞</div>
+  <div class="pattern-ko">~을/를 ~합니다 — 타동사의 목적어 표시</div>
+
+  <div class="example">
+    <div class="jp">ジュースを 飲みます。</div>
+    <div class="ko">주스를 마십니다.</div>
+  </div>
+  <div class="example">
+    <div class="jp">テレビを 見ます。</div>
+    <div class="ko">텔레비전을 봅니다.</div>
+  </div>
+  <div class="example">
+    <div class="jp">何を 食べますか。</div>
+    <div class="ko">무엇을 먹습니까?</div>
+    <div class="reply">
+      <div class="jp">……ラーメンを 食べます。</div>
+      <div class="ko">라면을 먹습니다.</div>
+    </div>
+  </div>
+
+  <div class="note">
+    ※ 「を」는 목적어를 나타내는 조사. 한국어 「~을/를」에 해당.<br>
+    ※ 「を」의 표기만 다를 뿐, 발음은 「お」와 같음.
+  </div>
+</div>
+
+<!-- 섹션 2 -->
+<div class="section-title">
+  <div class="section-num">2</div>
+  <h2>문형 2 — 명사を します</h2>
+</div>
+
+<div class="card">
+  <div class="pattern-num">문형 2</div>
+  <div class="pattern">名詞を します</div>
+  <div class="pattern-ko">~을/를 합니다 — 명사+します으로 동사 표현</div>
+
+  <div class="example">
+    <div class="jp">サッカーを します。</div>
+    <div class="ko">축구를 합니다.</div>
+  </div>
+  <div class="example">
+    <div class="jp">パーティーを します。</div>
+    <div class="ko">파티를 합니다.</div>
+  </div>
+  <div class="example">
+    <div class="jp">仕事を します。</div>
+    <div class="ko">일을 합니다.</div>
+  </div>
+  <div class="example">
+    <div class="jp">電話を します。</div>
+    <div class="ko">전화를 합니다.</div>
+  </div>
+
+  <div style="margin-top:14px;">
+    <div style="font-size:13px; font-weight:700; color:var(--primary); margin-bottom:8px;">〜をします 세트</div>
+    <div class="tag-group">
+      <span class="tag">スポーツ・ゲーム</span>
+      <span class="tag">모임・이벤트</span>
+      <span class="tag">업무・기타</span>
+    </div>
+  </div>
+
+  <div class="note">
+    ※ 「명사+します」는 명사에 동사적 의미를 부여하는 패턴.<br>
+    ※ 비슷한 패턴: 料理を します(요리를 합니다), 会議を します(회의를 합니다)
+  </div>
+</div>
+
+<!-- 섹션 3 -->
+<div class="section-title">
+  <div class="section-num">3</div>
+  <h2>문형 3 — 何を しますか</h2>
+</div>
+
+<div class="card">
+  <div class="pattern-num">문형 3</div>
+  <div class="pattern">何を しますか／しましたか</div>
+  <div class="pattern-ko">무엇을 합니까? / 했습니까? — 행동을 묻는 표현</div>
+
+  <div class="example">
+    <div class="jp">月曜日に 何を しますか。</div>
+    <div class="ko">월요일에 무엇을 합니까?</div>
+    <div class="reply">
+      <div class="jp">……京都へ 行きます。</div>
+      <div class="ko">교토에 갑니다.</div>
+    </div>
+  </div>
+  <div class="example">
+    <div class="jp">きのう 何を しましたか。</div>
+    <div class="ko">어제 무엇을 했습니까?</div>
+    <div class="reply">
+      <div class="jp">……サッカーを しました。</div>
+      <div class="ko">축구를 했습니다.</div>
+    </div>
+  </div>
+
+  <div class="note">
+    ※ 「何を」의 「何」는 「なに」로 읽음 (문형 4 참조).
+  </div>
+</div>
+
+<!-- 섹션 4 -->
+<div class="section-title">
+  <div class="section-num">4</div>
+  <h2>문형 4 — なん vs なに</h2>
+</div>
+
+<div class="card">
+  <div class="pattern-num">문형 4</div>
+  <div class="pattern">何 — なん／なに</div>
+  <div class="pattern-ko">무엇 — 뒤에 오는 말에 따라 읽기가 달라짐</div>
+
+  <div class="table-wrap" style="margin-bottom:12px;">
+    <table>
+      <thead>
+        <tr>
+          <th>읽기</th>
+          <th>사용 환경</th>
+          <th>예문</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:700; color:var(--primary);">なん</td>
+          <td class="row-label">た/だ/な행 앞</td>
+          <td style="text-align:left;">それは <strong>何</strong>ですか。</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700; color:var(--primary);">なに</td>
+          <td class="row-label">그 외</td>
+          <td style="text-align:left;"><strong>何</strong>を 買いますか。<br><strong>何</strong>で 行きますか。</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    ※ 헷갈릴 때는 「なに」를 쓰는 경우가 더 많음.<br>
+    ※ 「何ですか」는 반드시 <strong>なんですか</strong>.<br>
+    ※ <strong>なんで</strong>는 「왜?」라는 뜻으로도 쓰임 (=どうして, 구어체).<br>
+    　 5과의 「<strong>何で</strong> 行きますか」(무엇으로 갑니까?)와 발음은 같지만 뜻이 다름!
+  </div>
+</div>
+
+<!-- 섹션 5 -->
+<div class="section-title">
+  <div class="section-num">5</div>
+  <h2>문형 5 — 명사(장소)で 동사</h2>
+</div>
+
+<div class="card">
+  <div class="pattern-num">문형 5</div>
+  <div class="pattern">名詞(장소)で 動詞</div>
+  <div class="pattern-ko">~에서 ~합니다 — 동작이 일어나는 장소 표시</div>
+
+  <div class="example">
+    <div class="jp">駅で 新聞を 買います。</div>
+    <div class="ko">역에서 신문을 삽니다.</div>
+  </div>
+  <div class="example">
+    <div class="jp">うちで 日本語を 勉強します。</div>
+    <div class="ko">집에서 일본어를 공부합니다.</div>
+  </div>
+  <div class="example">
+    <div class="jp">どこで 昼ごはんを 食べますか。</div>
+    <div class="ko">어디에서 점심을 먹습니까?</div>
+    <div class="reply">
+      <div class="jp">……レストランで 食べます。</div>
+      <div class="ko">레스토랑에서 먹습니다.</div>
+    </div>
+  </div>
+
+  <div class="note">
+    ※ 「で」의 용법 정리:<br>
+    　① <strong>장소</strong>에서의 동작 → 図書館<strong>で</strong> 勉強します<br>
+    　② <strong>교통수단</strong> → 電車<strong>で</strong> 行きます (5과)<br>
+    　③ <strong>수단/도구</strong> → はし<strong>で</strong> 食べます (7과)
+  </div>
+</div>
+
+<!-- 섹션 6 -->
+<div class="section-title">
+  <div class="section-num">6</div>
+  <h2>문형 6 — 동사ませんか / 동사ましょう</h2>
+</div>
+
+<div class="card">
+  <div class="pattern-num">문형 6</div>
+  <div class="pattern">動詞ませんか／動詞ましょう</div>
+  <div class="pattern-ko">~하지 않겠습니까? / ~합시다 — 권유와 제안</div>
+
+  <div class="example">
+    <div class="jp">いっしょに 京都へ 行きませんか。</div>
+    <div class="ko">함께 교토에 가지 않겠습니까?</div>
+    <div class="reply">
+      <div class="jp">……ええ、いいですね。</div>
+      <div class="ko">네, 좋네요.</div>
+    </div>
+  </div>
+  <div class="example">
+    <div class="jp">いっしょに 昼ごはんを 食べましょう。</div>
+    <div class="ko">함께 점심을 먹읍시다.</div>
+    <div class="reply">
+      <div class="jp">……ええ、食べましょう。</div>
+      <div class="ko">네, 먹읍시다.</div>
+    </div>
+  </div>
+
+  <div class="table-wrap" style="margin-top:12px;">
+    <table>
+      <thead>
+        <tr>
+          <th>표현</th>
+          <th>뉘앙스</th>
+          <th>상대 의향</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:700;">ませんか</td>
+          <td class="row-label">권유 (부드럽게)</td>
+          <td class="row-label">존중함</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">ましょう</td>
+          <td class="row-label">제안 (적극적)</td>
+          <td class="row-label">함께 결정</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    ※ <strong>ませんか</strong>: 상대의 의향을 존중하는 부드러운 권유. 거절할 여지 있음.<br>
+    ※ <strong>ましょう</strong>: 함께 하자는 적극적 제안. 이미 합의된 분위기에서도 사용.
+  </div>
+</div>
+
+<!-- 섹션 7 -->
+<div class="section-title">
+  <div class="section-num">7</div>
+  <h2>문형 7 — 〜か (납득)</h2>
+</div>
+
+<div class="card">
+  <div class="pattern-num">문형 7</div>
+  <div class="pattern">〜か。</div>
+  <div class="pattern-ko">~군요 / ~이요? — 새 정보를 납득할 때</div>
+
+  <div class="example">
+    <div class="jp">日曜日に 京都へ 行きました。</div>
+    <div class="ko">일요일에 교토에 갔습니다.</div>
+    <div class="reply">
+      <div class="jp">……京都ですか。いいですね。</div>
+      <div class="ko">교토요? 좋겠네요.</div>
+    </div>
+  </div>
+  <div class="example">
+    <div class="jp">あしたは 仕事が ありません。</div>
+    <div class="ko">내일은 일이 없습니다.</div>
+    <div class="reply">
+      <div class="jp">……そうですか。</div>
+      <div class="ko">그렇군요.</div>
+    </div>
+  </div>
+
+  <div class="note">
+    ※ 상대에게서 처음 듣는 <strong>새 정보</strong>를 납득·확인할 때 사용.<br>
+    ※ 「そうですか」(8과)와 연결: 새 정보 납득 → か / 공유 정보 동의 → ね
+  </div>
+</div>
+
+<!-- 섹션 8: 조사 정리 -->
+<div class="section-title">
+  <div class="section-num">8</div>
+  <h2>조사 정리 (助詞まとめ)</h2>
+</div>
+
+<div class="card particle-table">
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:56px;">조사</th>
+          <th>의미</th>
+          <th>예문</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>を</td>
+          <td>~을/를 · 목적어</td>
+          <td style="text-align:left;">ジュース<strong>を</strong> 飲みます。</td>
+        </tr>
+        <tr>
+          <td>で</td>
+          <td>~에서 · 동작의 장소</td>
+          <td style="text-align:left;">駅<strong>で</strong> 新聞を 買います。</td>
+        </tr>
+        <tr>
+          <td>で</td>
+          <td>~로/으로 · 교통수단 (5과)</td>
+          <td style="text-align:left;">電車<strong>で</strong> 行きます。</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note" style="margin-top:12px;">
+    ※ 「で」는 ①장소, ②교통수단, ③수단/도구 세 가지 용법이 있으니 주의!<br>
+    ※ 「に」(시간·도착점)와 「で」(장소·수단) 구분은 시험에 자주 나오는 포인트.
+  </div>
+</div>
+
+<div class="footer">
+  みんなの日本語 初級Ⅰ · 第6課 いっしょに 行きませんか
+</div>
+
+</body>
+</html>
