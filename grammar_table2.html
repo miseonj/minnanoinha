@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>일본어 문법 활용표</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
+    background: #f5f3ee;
+    color: #1a1a2a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 36px 24px;
+  }
+
+  h1 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 400;
+    letter-spacing: 0.4em;
+    color: #2a2a4a;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: #7a7a9a;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    max-width: 1160px;
+    width: 100%;
+  }
+
+  .table-wrap {
+    width: 100%;
+    max-width: 1160px;
+    overflow-x: auto;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    background: #fff;
+  }
+
+  /* 헤더 */
+  thead tr th {
+    padding: 12px 8px;
+    text-align: center;
+    border: 1.5px solid #dde0ea;
+    font-weight: 600;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+  }
+
+  thead tr:first-child th { background: #2d3a6a; color: #e8edf8; font-size: 0.88rem; }
+  thead tr:last-child th  { background: #e8ecf8; color: #3a4a7a; font-size: 0.78rem; font-weight: 500; }
+
+  /* 행 라벨 */
+  td.row-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 12px 10px;
+    border: 1.5px solid #dde0ea;
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+  }
+
+  td.row-label .jp {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.88rem;
+    display: block;
+  }
+
+  /* 데이터 셀 */
+  td.cell {
+    text-align: center;
+    padding: 12px 8px;
+    border: 1.5px solid #dde0ea;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    vertical-align: middle;
+  }
+
+  td.cell .sub { font-size: 0.72rem; display: block; margin-top: 2px; }
+
+  .dash { color: #c0c4d8; font-size: 1.1rem; }
+
+  /* 행별 색상 */
+  tr.row-na  td.row-label { background: #e8f0ff; color: #2040a0; }
+  tr.row-na  td.cell      { background: #f0f5ff; }
+
+  tr.row-mei td.row-label { background: #f0eeff; color: #4030a0; }
+  tr.row-mei td.cell      { background: #f8f6ff; }
+
+  tr.row-i   td.row-label { background: #fff0f3; color: #a03050; }
+  tr.row-i   td.cell      { background: #fff7f8; }
+
+  tr.row-dou td.row-label { background: #f0fff4; color: #207040; }
+  tr.row-dou td.cell      { background: #f6fff9; }
+
+  /* 긍정/부정 색 */
+  .pos  { color: #1a4aaa; font-weight: 600; }
+  .neg  { color: #aa2244; font-weight: 600; }
+  .ppos { color: #206040; font-weight: 600; }
+  .pneg { color: #885010; font-weight: 600; }
+
+  /* 예시 섹션 */
+  .ex-divider td {
+    background: #e8ecf8;
+    color: #3a4a7a;
+    font-size: 0.78rem;
+    font-weight: 600;
+    font-family: 'Noto Sans JP', sans-serif;
+    letter-spacing: 0.12em;
+    padding: 7px 10px;
+    border: 1.5px solid #dde0ea;
+  }
+
+  .footnote {
+    margin-top: 18px;
+    font-size: 0.76rem;
+    color: #8888aa;
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 0.03em;
+  }
+</style>
+</head>
+<body>
+
+<h1>일 본 어 &nbsp; 문 법 &nbsp; 활 용 표</h1>
+
+<!-- ===== 활용표 ===== -->
+<div class="section-label">활용표</div>
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2" style="width:110px; background:#2d3a6a;"></th>
+      <th colspan="4" style="background:#2d3a6a; color:#e8edf8;">현재 (비과거)</th>
+      <th colspan="4" style="background:#2d3a6a; color:#e8edf8;">과거</th>
+    </tr>
+    <tr>
+      <th>긍정 보통</th><th>긍정 정중</th>
+      <th>부정 보통</th><th>부정 정중</th>
+      <th>긍정 보통</th><th>긍정 정중</th>
+      <th>부정 보통</th><th>부정 정중</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- な형용사 -->
+    <tr class="row-na">
+      <td class="row-label">형용사<br><span class="jp">な형</span></td>
+      <td class="cell"><span class="pos">□ だ</span></td>
+      <td class="cell"><span class="pos">□ です</span></td>
+      <td class="cell"><span class="neg">□ では<br>ない</span></td>
+      <td class="cell"><span class="neg">□ では ないです<br><span class="sub" style="color:#bb6070">/ ありません</span></span></td>
+      <td class="cell"><span class="ppos">□ だった</span></td>
+      <td class="cell"><span class="ppos">□ でした</span></td>
+      <td class="cell"><span class="pneg">□ では<br>なかった</span></td>
+      <td class="cell"><span class="pneg">□ では なかったです<br><span class="sub" style="color:#998040">/ ありませんでした</span></span></td>
+    </tr>
+    <!-- 명사 -->
+    <tr class="row-mei">
+      <td class="row-label">명사</td>
+      <td class="cell"><span class="pos">□ だ</span></td>
+      <td class="cell"><span class="pos">□ です</span></td>
+      <td class="cell"><span class="neg">□ では<br>ない</span></td>
+      <td class="cell"><span class="neg">□ では ないです<br><span class="sub" style="color:#bb6070">/ ありません</span></span></td>
+      <td class="cell"><span class="ppos">□ だった</span></td>
+      <td class="cell"><span class="ppos">□ でした</span></td>
+      <td class="cell"><span class="pneg">□ では<br>なかった</span></td>
+      <td class="cell"><span class="pneg">□ では なかったです<br><span class="sub" style="color:#998040">/ ありませんでした</span></span></td>
+    </tr>
+    <!-- い형용사 -->
+    <tr class="row-i">
+      <td class="row-label">형용사<br><span class="jp">い형</span></td>
+      <td class="cell"><span class="pos">□ い</span></td>
+      <td class="cell"><span class="pos">□ いです</span></td>
+      <td class="cell"><span class="neg">□ く<br>ない</span></td>
+      <td class="cell"><span class="neg">□ く ないです<br><span class="sub" style="color:#bb6070">/ くありません</span></span></td>
+      <td class="cell"><span class="ppos">□ かった</span></td>
+      <td class="cell"><span class="ppos">□ かった<br>です</span></td>
+      <td class="cell"><span class="pneg">□ く<br>なかった</span></td>
+      <td class="cell"><span class="pneg">□ く なかったです<br><span class="sub" style="color:#998040">/ くありませんでした</span></span></td>
+    </tr>
+    <!-- 동사 -->
+    <tr class="row-dou">
+      <td class="row-label">동사</td>
+      <td class="cell"><span class="dash">—</span></td>
+      <td class="cell"><span class="pos" style="color:#207040">□ ます</span></td>
+      <td class="cell"><span class="dash">—</span></td>
+      <td class="cell"><span class="neg" style="color:#206040">□ ません</span></td>
+      <td class="cell"><span class="dash">—</span></td>
+      <td class="cell"><span class="ppos">□ ました</span></td>
+      <td class="cell"><span class="dash">—</span></td>
+      <td class="cell"><span class="pneg">□ ません<br>でした</span></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ===== 예시 ===== -->
+<div class="section-label" style="margin-top:20px;">예시　（パン・おいしい・有名・たべる）</div>
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2" style="width:110px; background:#2d3a6a;"></th>
+      <th colspan="4" style="background:#2d3a6a; color:#e8edf8;">현재 (비과거)</th>
+      <th colspan="4" style="background:#2d3a6a; color:#e8edf8;">과거</th>
+    </tr>
+    <tr>
+      <th>긍정 보통</th><th>긍정 정중</th>
+      <th>부정 보통</th><th>부정 정중</th>
+      <th>긍정 보통</th><th>긍정 정중</th>
+      <th>부정 보통</th><th>부정 정중</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- な형용사 예시 -->
+    <tr class="ex-divider"><td colspan="9">な형용사　— 　有名（な）</td></tr>
+    <tr class="row-na">
+      <td class="row-label"><span class="jp">有名な</span></td>
+      <td class="cell"><span class="pos">有名だ</span></td>
+      <td class="cell"><span class="pos">有名です</span></td>
+      <td class="cell"><span class="neg">有名では<br>ない</span></td>
+      <td class="cell"><span class="neg">有名では ないです<br><span class="sub" style="color:#bb6070">/ ありません</span></span></td>
+      <td class="cell"><span class="ppos">有名だった</span></td>
+      <td class="cell"><span class="ppos">有名でした</span></td>
+      <td class="cell"><span class="pneg">有名では<br>なかった</span></td>
+      <td class="cell"><span class="pneg">有名では なかったです<br><span class="sub" style="color:#998040">/ ありませんでした</span></span></td>
+    </tr>
+    <!-- 명사 예시 -->
+    <tr class="ex-divider"><td colspan="9">명사　— 　パン</td></tr>
+    <tr class="row-mei">
+      <td class="row-label"><span class="jp">パン</span></td>
+      <td class="cell"><span class="pos">パンだ</span></td>
+      <td class="cell"><span class="pos">パンです</span></td>
+      <td class="cell"><span class="neg">パンでは<br>ない</span></td>
+      <td class="cell"><span class="neg">パンでは ないです<br><span class="sub" style="color:#bb6070">/ ありません</span></span></td>
+      <td class="cell"><span class="ppos">パンだった</span></td>
+      <td class="cell"><span class="ppos">パンでした</span></td>
+      <td class="cell"><span class="pneg">パンでは<br>なかった</span></td>
+      <td class="cell"><span class="pneg">パンでは なかったです<br><span class="sub" style="color:#998040">/ ありませんでした</span></span></td>
+    </tr>
+    <!-- い형용사 예시 -->
+    <tr class="ex-divider"><td colspan="9">い형용사　— 　おいしい</td></tr>
+    <tr class="row-i">
+      <td class="row-label"><span class="jp">おいしい</span></td>
+      <td class="cell"><span class="pos">おいしい</span></td>
+      <td class="cell"><span class="pos">おいしいです</span></td>
+      <td class="cell"><span class="neg">おいしく<br>ない</span></td>
+      <td class="cell"><span class="neg">おいしく ないです<br><span class="sub" style="color:#bb6070">/ くありません</span></span></td>
+      <td class="cell"><span class="ppos">おいしかった</span></td>
+      <td class="cell"><span class="ppos">おいしかった<br>です</span></td>
+      <td class="cell"><span class="pneg">おいしく<br>なかった</span></td>
+      <td class="cell"><span class="pneg">おいしく なかったです<br><span class="sub" style="color:#998040">/ くありませんでした</span></span></td>
+    </tr>
+    <!-- 동사 예시 -->
+    <tr class="ex-divider"><td colspan="9">동사　— 　たべる</td></tr>
+    <tr class="row-dou">
+      <td class="row-label"><span class="jp">たべる</span></td>
+      <td class="cell"><span class="dash">—</span></td>
+      <td class="cell"><span class="pos" style="color:#207040">たべます</span></td>
+      <td class="cell"><span class="dash">—</span></td>
+      <td class="cell"><span class="neg" style="color:#206040">たべません</span></td>
+      <td class="cell"><span class="dash">—</span></td>
+      <td class="cell"><span class="ppos">たべました</span></td>
+      <td class="cell"><span class="dash">—</span></td>
+      <td class="cell"><span class="pneg">たべません<br>でした</span></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="footnote">
+  ※ では는 じゃ로 바꿔 쓸 수 있습니다　　※ □ = 어간(語幹)<br>
+  ※ <strong>な형용사는 명사와 활용이 동일합니다</strong>
+</div>
+
+</body>
+</html>
