@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>민나노 일본어 8과 정리</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+:root{
+  --primary:#2d6a4f;--primary-light:#52b788;--accent:#e0671a;--accent-soft:#fde4cf;
+  --bg:#f8f9f4;--card-bg:#fff;--text:#1b1b1b;--text-light:#555;--border:#d8e8d8;
+  --tag-bg:#d8f3dc;--tag-text:#1b4332;--example-bg:#f0f7f0;--note-bg:#fff8ee;--note-border:#f4a261;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Noto Sans KR','Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:24px 16px 60px;max-width:720px;margin:0 auto;}
+
+.header{text-align:center;margin-bottom:32px;padding:28px 20px;background:var(--primary);border-radius:16px;color:#fff;}
+.header .subtitle{font-size:13px;opacity:.75;letter-spacing:.08em;margin-bottom:6px;}
+.header h1{font-size:22px;font-weight:700;margin-bottom:6px;}
+.header .jp-title{font-size:15px;opacity:.85;font-weight:300;}
+
+.section-title{display:flex;align-items:center;gap:10px;margin:32px 0 16px;}
+.section-num{background:var(--primary);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;}
+.section-title h2{font-size:17px;font-weight:700;color:var(--primary);}
+
+.card{background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:14px;}
+.pattern-num{font-size:12px;font-weight:700;color:var(--primary-light);margin-bottom:6px;letter-spacing:.05em;}
+.pattern{font-size:18px;font-weight:700;color:var(--primary);margin-bottom:4px;font-family:'Noto Sans JP',sans-serif;}
+.pattern-ko{font-size:13px;color:var(--text-light);margin-bottom:14px;}
+
+.rulebox{background:var(--example-bg);border-radius:8px;padding:12px 14px;margin-bottom:10px;font-size:14.5px;font-weight:500;}
+.rulebox .lab{display:inline-block;font-size:12px;font-weight:700;color:#fff;border-radius:14px;padding:2px 11px;margin-right:8px;}
+.lab.na{background:var(--primary);}
+.lab.i{background:var(--accent);}
+.rulebox .ar{color:var(--accent);font-weight:700;}
+.k-na{color:var(--primary);font-weight:700;}
+.k-i{color:var(--accent);font-weight:700;}
+
+.example{background:var(--example-bg);border-radius:8px;padding:12px 14px;margin-bottom:8px;}
+.example .jp{font-family:'Noto Sans JP',sans-serif;font-size:15px;color:var(--text);margin-bottom:2px;}
+.example .ko{font-size:13px;color:var(--text-light);}
+.example .reply{margin-top:8px;padding-top:8px;border-top:1px dashed var(--border);}
+
+.note{background:var(--note-bg);border-left:3px solid var(--note-border);border-radius:0 8px 8px 0;padding:10px 14px;margin-top:10px;font-size:13px;color:var(--text-light);}
+.note strong{color:var(--text);}
+.note .warn{color:var(--accent);font-weight:700;}
+
+.table-wrap{overflow-x:auto;margin-top:4px;}
+table{width:100%;border-collapse:collapse;font-size:14px;}
+th{background:var(--primary);color:#fff;padding:10px 12px;text-align:center;font-weight:500;}
+td{padding:10px 12px;text-align:center;border-bottom:1px solid var(--border);font-family:'Noto Sans JP',sans-serif;}
+tr:last-child td{border-bottom:none;}
+tr:nth-child(even) td{background:var(--example-bg);}
+.row-label{font-family:'Noto Sans KR',sans-serif;font-size:13px;color:var(--text-light);text-align:left;font-weight:500;}
+td b{color:var(--accent);}
+.cell-na{color:var(--primary);font-weight:700;}
+.cell-i{color:var(--accent);font-weight:700;}
+
+.tag-group{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
+.tag{border-radius:20px;padding:4px 14px;font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:500;}
+.tag.na{background:var(--tag-bg);color:var(--tag-text);}
+.tag.i{background:var(--accent-soft);color:#9c4221;}
+
+.footer{text-align:center;font-size:12px;color:#aaa;margin-top:40px;}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="subtitle">みんなの日本語 初級Ⅰ · 第8課</div>
+  <h1>そろそろ 失礼します — 형용사 문법 정리</h1>
+  <div class="jp-title">い形容詞 · な形容詞</div>
+</div>
+
+<!-- 1 형용사란 -->
+<div class="section-title"><div class="section-num">1</div><h2>형용사란? — 두 종류</h2></div>
+<div class="card">
+  <div class="pattern-num">기본 개념</div>
+  <div class="pattern">い形容詞 / な形容詞</div>
+  <div class="pattern-ko">일본어 형용사는 두 종류이며, 활용법이 다르다</div>
+
+  <div class="rulebox"><span class="lab i">い형용사</span>「い」로 끝남 → <span class="k-i">高い・安い・おいしい・寒い・おもしろい</span></div>
+  <div class="rulebox"><span class="lab na">な형용사</span>명사를 꾸밀 때 「な」 → <span class="k-na">親切・静か・有名・にぎやか・きれい</span></div>
+
+  <div class="note">
+    ※ 형용사의 두 역할: <strong>① 술어</strong>(명사は 형용사です) · <strong>② 명사 수식</strong>(형용사+명사)<br>
+    ※ 한국어 형용사는 한 종류지만, 일본어는 <strong>い·な 두 종류</strong>로 나뉘고 활용이 다르다.<br>
+    ※ <span class="warn">きれい・ゆうめい</span>는 「い」로 끝나도 <strong>な형용사</strong>! 끝글자만 보지 말 것.
+  </div>
+</div>
+
+<!-- 2 긍정 -->
+<div class="section-title"><div class="section-num">2</div><h2>명사は 형용사です — 비과거 긍정</h2></div>
+<div class="card">
+  <div class="pattern-num">문형 2</div>
+  <div class="pattern">名詞は 形容詞です</div>
+  <div class="pattern-ko">~은/는 ~합니다 — 「です」는 청자에 대한 정중한 태도</div>
+
+  <div class="rulebox"><span class="lab na">な형용사</span>「な」 빼고 + <span class="k-na">です</span> &nbsp;→&nbsp; 親切<span class="k-na">です</span></div>
+  <div class="rulebox"><span class="lab i">い형용사</span>「~い」 그대로 + <span class="k-i">です</span> &nbsp;→&nbsp; 高い<span class="k-i">です</span></div>
+
+  <div class="example"><div class="jp">ワット先生は 親切です。</div><div class="ko">와트 선생님은 친절합니다.</div></div>
+  <div class="example"><div class="jp">富士山は 高いです。</div><div class="ko">후지산은 높습니다.</div></div>
+  <div class="example"><div class="jp">この 料理は おいしいです。</div><div class="ko">이 요리는 맛있습니다.</div></div>
+
+  <div class="note">※ な형용사는 「な」가 떨어진 형태에, い형용사는 「い」를 포함한 형태에 그대로 「です」가 붙는다.</div>
+</div>
+
+<!-- 3 부정 -->
+<div class="section-title"><div class="section-num">3</div><h2>비과거 부정</h2></div>
+<div class="card">
+  <div class="pattern-num">문형 3</div>
+  <div class="pattern">~じゃ ありません / ~くないです</div>
+  <div class="pattern-ko">~하지 않습니다 — な·い 형용사가 서로 다르게 변한다</div>
+
+  <div class="rulebox"><span class="lab na">な형용사</span>「な」 빼고 + <span class="k-na">じゃ(では)ありません</span></div>
+  <div class="rulebox"><span class="lab i">い형용사</span>끝의 「い」 삭제 + <span class="k-i">くないです</span></div>
+
+  <div class="example"><div class="jp">あそこは 静かじゃ ありません。</div><div class="ko">저기는 조용하지 않습니다.</div></div>
+  <div class="example"><div class="jp">この 本は おもしろくないです。</div><div class="ko">이 책은 재미없습니다.</div></div>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>활용</th><th class="cell-na">な형용사</th><th class="cell-i">い형용사</th></tr></thead>
+      <tbody>
+        <tr><td class="row-label">비과거 긍정</td><td>しんせつ<b>です</b></td><td>たか<b>いです</b></td></tr>
+        <tr><td class="row-label">비과거 부정</td><td>しんせつ<b>じゃ(では)ありません</b></td><td>たか<b>くないです</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    ※ <span class="warn">いいです</span>의 부정형은 <span class="warn">よくないです</span>! 「いい」는 부정·과거에서 「よい」로 바뀐다 — 통째로 외우기.<br>
+    ※ 「~くないです」 대신 「~く ありません」도 가능 (高く ありません).
+  </div>
+</div>
+
+<!-- 4 의문문 -->
+<div class="section-title"><div class="section-num">4</div><h2>형용사문의 의문문</h2></div>
+<div class="card">
+  <div class="pattern-num">문형 4</div>
+  <div class="pattern">形容詞ですか</div>
+  <div class="pattern-ko">~합니까? — 명사문(1과)·동사문(4과)과 똑같이 끝에 「か」</div>
+
+  <div class="example">
+    <div class="jp">ペキンは 寒いですか。</div><div class="ko">베이징은 춥습니까?</div>
+    <div class="reply"><div class="jp">……はい、寒いです。</div><div class="ko">네, 춥습니다.</div></div>
+  </div>
+  <div class="example">
+    <div class="jp">奈良公園は にぎやかですか。</div><div class="ko">나라공원은 사람이 많습니까?</div>
+    <div class="reply"><div class="jp">……いいえ、にぎやかじゃ ありません。</div><div class="ko">아니요, 사람이 많지 않습니다.</div></div>
+  </div>
+
+  <div class="note">
+    ※ 대답은 <strong>형용사로</strong> → はい、<strong>寒いです</strong>。<br>
+    ※ 「寒いですか」에 <span class="warn">「そうです」(단정 응답)</span>로 답하는 건 어색 (명사문과 다른 점).<br>
+    ※ 단, <strong>「そうですね」(그렇네요)</strong>처럼 맞장구·동의로는 형용사에도 쓸 수 있다.
+  </div>
+</div>
+
+<!-- 5 수식 -->
+<div class="section-title"><div class="section-num">5</div><h2>형용사 + 명사 — 명사 수식</h2></div>
+<div class="card">
+  <div class="pattern-num">문형 5</div>
+  <div class="pattern">な形容詞な + 名詞 / い形容詞(~い) + 名詞</div>
+  <div class="pattern-ko">형용사가 명사를 꾸밀 때는 명사 앞에 온다</div>
+
+  <div class="rulebox"><span class="lab na">な형용사</span><span class="k-na">な</span> + 명사 &nbsp;→&nbsp; 親切<span class="k-na">な</span> 先生</div>
+  <div class="rulebox"><span class="lab i">い형용사</span>「~い」 + 명사 &nbsp;→&nbsp; 高い 山</div>
+
+  <div class="example"><div class="jp">ワット先生は 親切な 先生です。</div><div class="ko">와트 선생님은 친절한 선생님입니다.</div></div>
+  <div class="example"><div class="jp">富士山は 高い 山です。</div><div class="ko">후지산은 높은 산입니다.</div></div>
+
+  <div class="note">※ な형용사는 명사 앞에서만 「な」가 살아난다. (술어 親切<strong>です</strong> ↔ 수식 親切<strong>な</strong>先生)</div>
+</div>
+
+<!-- 6 ~が -->
+<div class="section-title"><div class="section-num">6</div><h2>~が、~ — 역접</h2></div>
+<div class="card">
+  <div class="pattern-num">문형 6</div>
+  <div class="pattern">~ですが、~</div>
+  <div class="pattern-ko">~지만 — 앞뒤 내용을 반대로 연결</div>
+
+  <div class="example"><div class="jp">日本の 食べ物は おいしいですが、高いです。</div><div class="ko">일본 음식은 맛있지만, 비쌉니다.</div></div>
+
+  <div class="note">
+    ※ 보통 앞에 <strong>긍정적</strong> 평가가 오면 뒤엔 <strong>부정적</strong> 평가가 (또는 그 반대).<br>
+    ※ <span class="warn">주격조사 が(이/가)와 글자만 같고 기능이 다르다</span> — 여기선 "~지만".<br>
+    ※ 접속 방법: 정중형 「です」를 그대로 두고 뒤에 「が」 → おいしい<strong>です</strong>が
+  </div>
+</div>
+
+<!-- 7 とても/あまり -->
+<div class="section-title"><div class="section-num">7</div><h2>とても / あまり — 정도 부사</h2></div>
+<div class="card">
+  <div class="pattern-num">문형 7</div>
+  <div class="pattern">とても / あまり + 形容詞</div>
+  <div class="pattern-ko">정도를 나타내는 부사 — 형용사 앞에 온다</div>
+
+  <div class="table-wrap" style="margin-bottom:12px;">
+    <table>
+      <thead><tr><th>부사</th><th>뜻</th><th>함께 쓰는 문장</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--primary);">とても</td><td class="row-label">매우</td><td class="row-label">긍정문</td></tr>
+        <tr><td style="font-weight:700;color:var(--accent);">あまり</td><td class="row-label">별로</td><td class="row-label">부정형 (반드시!)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="example"><div class="jp">ペキンは とても 寒いです。</div><div class="ko">베이징은 매우 춥습니다.</div></div>
+  <div class="example"><div class="jp">これは とても 有名な 映画です。</div><div class="ko">이것은 매우 유명한 영화입니다.</div></div>
+  <div class="example"><div class="jp">シャンハイは あまり 寒くないです。</div><div class="ko">상하이는 별로 춥지 않습니다.</div></div>
+  <div class="example"><div class="jp">さくら大学は あまり 有名な 大学じゃ ありません。</div><div class="ko">사쿠라대학교는 별로 유명한 대학교가 아닙니다.</div></div>
+
+  <div class="note">
+    ※ <span class="warn">あまり</span>는 반드시 <strong>부정형</strong>과 함께! (한국어 "별로 안~"과 같은 호응)<br>
+    ※ 부사는 명사 수식형(有名な 映画)도 통째로 꾸밀 수 있다.
+  </div>
+</div>
+
+<!-- 8 どう/どんな -->
+<div class="section-title"><div class="section-num">8</div><h2>どうですか / どんな ~ですか</h2></div>
+<div class="card">
+  <div class="pattern-num">문형 8</div>
+  <div class="pattern">名詞は どうですか / 名詞1は どんな 名詞2ですか</div>
+  <div class="pattern-ko">どう = 전체 인상 / どんな = 성질·종류 (명사 수식)</div>
+
+  <div class="example">
+    <div class="jp">日本の 生活は どうですか。</div><div class="ko">일본 생활은 어떻습니까?</div>
+    <div class="reply"><div class="jp">……楽しいです。</div><div class="ko">즐겁습니다.</div></div>
+  </div>
+  <div class="example">
+    <div class="jp">奈良は どんな 町ですか。</div><div class="ko">나라는 어떤 도시입니까?</div>
+    <div class="reply"><div class="jp">……古い 町です。</div><div class="ko">오래된 도시입니다.</div></div>
+  </div>
+
+  <div class="note">
+    ※ <strong>どう</strong> → 전체 인상·감상을 묻기 → 대답은 형용사 술어 (楽しいです).<br>
+    ※ <strong>どんな</strong> → 뒤에 반드시 <strong>명사</strong>가 붙어 성질을 묻기 → 대답은 형용사+명사 (古い 町です).<br>
+    ※ 한국어로는 둘 다 "어떻—"으로 번역돼 헷갈리니 <span class="warn">どう ↔ どんな</span> 구분 주의!
+  </div>
+</div>
+
+<!-- 9 そうですね -->
+<div class="section-title"><div class="section-num">9</div><h2>そうですね — 두 가지 얼굴</h2></div>
+<div class="card">
+  <div class="pattern-num">표현</div>
+  <div class="pattern">そうですね</div>
+  <div class="pattern-ko">맥락에 따라 "동의" 또는 "생각 중"</div>
+
+  <div class="table-wrap" style="margin-bottom:12px;">
+    <table>
+      <thead><tr><th>과</th><th>의미</th><th>느낌</th></tr></thead>
+      <tbody>
+        <tr><td class="row-label" style="font-weight:700;">5과</td><td class="row-label">동의·동감</td><td class="row-label">"그렇네요" ↘</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">8과</td><td class="row-label">생각 중</td><td class="row-label">"글쎄요…" ↗ (즉답 전 한 박자)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="example">
+    <div class="jp">お仕事は どうですか。</div><div class="ko">일은 어떻습니까?</div>
+    <div class="reply"><div class="jp">……そうですね。忙しいですが、おもしろいです。</div><div class="ko">글쎄요, 바쁘지만 재미있습니다.</div></div>
+  </div>
+
+  <div class="note">※ 같은 「そうですね」라도 억양·맥락으로 의미가 갈린다. 8과 회화의 そうですね는 대답을 고르는 시간 벌기.</div>
+</div>
+
+<!-- 10 한눈 정리 -->
+<div class="section-title"><div class="section-num">10</div><h2>한눈에 — な형용사 vs い형용사</h2></div>
+<div class="card">
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th></th><th class="cell-na">な형용사 (親切)</th><th class="cell-i">い형용사 (高い)</th></tr></thead>
+      <tbody>
+        <tr><td class="row-label">긍정</td><td>親切<b>です</b></td><td>高<b>いです</b></td></tr>
+        <tr><td class="row-label">부정</td><td>親切<b>じゃ ありません</b></td><td>高<b>くないです</b></td></tr>
+        <tr><td class="row-label">명사 수식</td><td>親切<b>な</b> 先生</td><td>高<b>い</b> 山</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">※ 핵심은 단 하나 — な형용사는 자리에 따라 <strong>です/な</strong>가 바뀌고, い형용사는 <strong>「い」를 품은 채</strong> 변한다.</div>
+</div>
+
+<div class="footer">みんなの日本語 初級Ⅰ · 第8課 そろそろ 失礼します</div>
+
+</body>
+</html>
