@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>민나노 일본어 9·10과 정리</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+:root{
+  --primary:#2d6a4f;--primary-light:#52b788;--accent:#e0671a;--accent-soft:#fde4cf;
+  --bg:#f8f9f4;--card-bg:#fff;--text:#1b1b1b;--text-light:#555;--border:#d8e8d8;
+  --tag-bg:#d8f3dc;--tag-text:#1b4332;--example-bg:#f0f7f0;--note-bg:#fff8ee;--note-border:#f4a261;
+  --range-bg:#eef6f1;--range-border:#52b788;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Noto Sans KR','Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:24px 16px 60px;max-width:720px;margin:0 auto;}
+
+.header{text-align:center;margin-bottom:24px;padding:28px 20px;background:var(--primary);border-radius:16px;color:#fff;}
+.header .subtitle{font-size:13px;opacity:.75;letter-spacing:.08em;margin-bottom:6px;}
+.header h1{font-size:22px;font-weight:700;margin-bottom:6px;}
+.header .jp-title{font-size:15px;opacity:.85;font-weight:300;}
+
+.scope{background:var(--range-bg);border:2px solid var(--range-border);border-radius:14px;padding:18px 20px;margin-bottom:8px;}
+.scope h3{font-size:15px;color:var(--primary);margin-bottom:10px;}
+.scope p{font-size:14px;color:var(--text);margin-bottom:6px;}
+.scope p .hl{color:var(--accent);font-weight:700;}
+.scope p:last-child{margin-bottom:0;}
+
+.section-title{display:flex;align-items:center;gap:10px;margin:32px 0 16px;}
+.section-num{background:var(--primary);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;}
+.section-title h2{font-size:17px;font-weight:700;color:var(--primary);}
+
+.card{background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:14px;}
+.pattern-num{font-size:12px;font-weight:700;color:var(--primary-light);margin-bottom:6px;letter-spacing:.05em;}
+.pattern{font-size:18px;font-weight:700;color:var(--primary);margin-bottom:4px;font-family:'Noto Sans JP',sans-serif;}
+.pattern-ko{font-size:13px;color:var(--text-light);margin-bottom:14px;}
+
+.rulebox{background:var(--example-bg);border-radius:8px;padding:12px 14px;margin-bottom:10px;font-size:14.5px;font-weight:500;}
+.rulebox .lab{display:inline-block;font-size:12px;font-weight:700;color:#fff;border-radius:14px;padding:2px 11px;margin-right:8px;}
+.lab.na{background:var(--primary);}
+.lab.i{background:var(--accent);}
+.rulebox .ar{color:var(--accent);font-weight:700;}
+.k-na{color:var(--primary);font-weight:700;}
+.k-i{color:var(--accent);font-weight:700;}
+
+.example{background:var(--example-bg);border-radius:8px;padding:12px 14px;margin-bottom:8px;}
+.example .jp{font-family:'Noto Sans JP',sans-serif;font-size:15px;color:var(--text);margin-bottom:2px;}
+.example .ko{font-size:13px;color:var(--text-light);}
+.example .reply{margin-top:8px;padding-top:8px;border-top:1px dashed var(--border);}
+.exnum{display:inline-block;color:var(--primary-light);font-weight:700;margin-right:6px;}
+
+.note{background:var(--note-bg);border-left:3px solid var(--note-border);border-radius:0 8px 8px 0;padding:10px 14px;margin-top:10px;font-size:13px;color:var(--text-light);}
+.note strong{color:var(--text);}
+.note .warn{color:var(--accent);font-weight:700;}
+
+.rangebar{background:var(--range-bg);border:1.5px solid var(--range-border);border-radius:8px;padding:10px 14px;margin-top:10px;font-size:13.5px;font-weight:700;color:var(--primary);}
+.rangebar small{display:block;font-weight:500;color:var(--text-light);margin-top:3px;font-size:12.5px;}
+
+.table-wrap{overflow-x:auto;margin-top:4px;}
+table{width:100%;border-collapse:collapse;font-size:14px;}
+th{background:var(--primary);color:#fff;padding:10px 12px;text-align:center;font-weight:500;}
+td{padding:10px 12px;text-align:center;border-bottom:1px solid var(--border);font-family:'Noto Sans JP',sans-serif;}
+tr:last-child td{border-bottom:none;}
+tr:nth-child(even) td{background:var(--example-bg);}
+.row-label{font-family:'Noto Sans KR',sans-serif;font-size:13px;color:var(--text-light);text-align:left;font-weight:500;}
+td b{color:var(--accent);}
+.cell-na{color:var(--primary);font-weight:700;}
+.cell-i{color:var(--accent);font-weight:700;}
+
+.footer{text-align:center;font-size:12px;color:#aaa;margin-top:40px;}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="subtitle">みんなの日本語 初級Ⅰ · 第9課・第10課</div>
+  <h1>기말시험 범위 — 9·10과 문법 정리</h1>
+  <div class="jp-title">が로 받는 그룹 · あります／います</div>
+</div>
+
+<!-- 범위 안내 -->
+<div class="scope">
+  <h3>📌 시험 범위 안내</h3>
+  <p><strong>1~6과 · 8과</strong> → 교재 전체 범위 <span class="hl">(7과 제외)</span></p>
+  <p><strong>형용사 활용</strong> → 부정 · 과거까지 포함</p>
+  <p><strong>9 · 10과</strong> → 아래 <span class="hl">예문 범위 안에서만</span> 출제 (9과 ①~④ / 10과 ①~⑭)</p>
+</div>
+
+<!-- 1 9과 が그룹 -->
+<div class="section-title"><div class="section-num">1</div><h2>「が」로 받는 특수 그룹</h2></div>
+<div class="card">
+  <div class="pattern-num">第9課 · 文法</div>
+  <div class="pattern">名詞が 好きです / わかります / あります</div>
+  <div class="pattern-ko">좋아함·이해·소유는 목적어를 「を」가 아니라 「が」로 받는다</div>
+
+  <div class="rulebox"><span class="lab i">が그룹</span>好き · 嫌い · 上手 · 下手 · わかります · あります &nbsp;<span class="ar">→</span>&nbsp; 목적어를 <span class="k-i">が</span>로!</div>
+
+  <div class="example"><div class="jp"><span class="exnum">①</span>わたしは イタリア料理が 好きです。</div><div class="ko">저는 이탈리아 요리를 좋아합니다.</div></div>
+  <div class="example"><div class="jp"><span class="exnum">②</span>わたしは 日本語が わかります。</div><div class="ko">저는 일본어를 압니다(이해합니다).</div></div>
+  <div class="example"><div class="jp"><span class="exnum">③</span>わたしは 車が あります。</div><div class="ko">저는 차가 있습니다.</div></div>
+
+  <div class="note">
+    ※ 한국어 "을/를"에 끌려 <span class="warn">「を」</span>를 쓰면 ✗ &nbsp;→&nbsp; 반드시 <span class="warn">「が」</span>.<br>
+    ※ 한국어는 "요리<strong>를</strong> 좋아한다 / 일본어<strong>를</strong> 안다"인데 일본어는 「が」로 갈리는 지점 — 학습 함정 1순위.
+  </div>
+</div>
+
+<!-- 2 9과 8과 연결 + どんな -->
+<div class="section-title"><div class="section-num">2</div><h2>8과와 이어지는 포인트 — な형용사 · どんな</h2></div>
+<div class="card">
+  <div class="pattern-num">第9課 · 文法</div>
+  <div class="pattern">好き · 上手 · 下手 = な形容詞</div>
+  <div class="pattern-ko">9과의 が그룹 중 일부는 사실 8과에서 배운 な형용사다</div>
+
+  <div class="rulebox"><span class="lab na">な형용사</span>好き · 上手 · 下手 → 8과 활용 그대로 (好き<span class="k-na">です</span> / 好き<span class="k-na">じゃ ありません</span>)</div>
+  <div class="rulebox"><span class="lab i">どんな 대답</span>8과: 형용사 (古い 町です) &nbsp;/&nbsp; 9과: <span class="k-i">이름</span> (サッカーが 好きです)</div>
+
+  <div class="example">
+    <div class="jp"><span class="exnum">④</span>どんな スポーツが 好きですか。</div><div class="ko">어떤 스포츠를 좋아합니까?</div>
+    <div class="reply"><div class="jp">……サッカーが 好きです。</div><div class="ko">축구를 좋아합니다.</div></div>
+  </div>
+
+  <div class="note">※ 같은 「どんな ~ですか」라도 8과는 <strong>성질</strong>(형용사)로, 9과는 <strong>대상의 이름</strong>(が+好き)으로 답한다.</div>
+
+  <div class="rangebar">📌 9과 예문 범위 &nbsp; ① ~ ④</div>
+</div>
+
+<!-- 3 10과 あります vs います -->
+<div class="section-title"><div class="section-num">3</div><h2>あります vs います — 존재의 두 동사</h2></div>
+<div class="card">
+  <div class="pattern-num">第10課 · 文法</div>
+  <div class="pattern">名詞が あります / います</div>
+  <div class="pattern-ko">한국어 "있다" 하나가 일본어에서는 둘로 갈린다</div>
+
+  <div class="rulebox"><span class="lab i">あります</span>사물 · 식물 (스스로 안 움직임) &nbsp;→&nbsp; <span class="k-i">桜 · 公園 · コンピューター</span></div>
+  <div class="rulebox"><span class="lab na">います</span>사람 · 동물 (스스로 움직임) &nbsp;→&nbsp; <span class="k-na">男の人 · 犬</span></div>
+
+  <div class="note">※ 기준은 <strong>"스스로 움직이는가"</strong>. 식물은 살아있어도 <strong>あります</strong> 쪽 — 헷갈리기 쉬움.</div>
+</div>
+
+<!-- 4 10과 존재의 に -->
+<div class="section-title"><div class="section-num">4</div><h2>존재 장소 = 「に」</h2></div>
+<div class="card">
+  <div class="pattern-num">第10課 · 文法</div>
+  <div class="pattern">[장소]に [명사]が あります / います</div>
+  <div class="pattern-ko">"어디에 무엇이 있다" — 존재하는 장소는 「に」로 표시</div>
+
+  <div class="example"><div class="jp"><span class="exnum">⑥</span>わたしの部屋に 机が あります。</div><div class="ko">제 방에 책상이 있습니다.</div></div>
+  <div class="example"><div class="jp"><span class="exnum">⑦</span>事務所に ミラーさんが います。</div><div class="ko">사무실에 미러 씨가 있습니다.</div></div>
+
+  <div class="note">※ 사물이면 끝에 <strong>あります</strong>, 사람·동물이면 <strong>います</strong> — 3번 구분이 그대로 적용된다.</div>
+</div>
+
+<!-- 5 10과 어순 は vs が -->
+<div class="section-title"><div class="section-num">5</div><h2>어순이 뒤집힌다 — は vs が</h2></div>
+<div class="card">
+  <div class="pattern-num">第10課 · 文法</div>
+  <div class="pattern">~に ~が います ↔ ~は ~に います</div>
+  <div class="pattern-ko">무엇을 "이미 아는가"에 따라 주제가 앞으로 나오고 조사가 바뀐다</div>
+
+  <div class="table-wrap" style="margin-bottom:12px;">
+    <table>
+      <thead><tr><th>유형</th><th>예문</th></tr></thead>
+      <tbody>
+        <tr><td class="row-label"><b style="color:var(--accent);">장소に 명사が</b><br><span style="color:#888;">새 정보 (장소가 주제)</span></td><td>事務所<b>に</b> ミラーさん<b>が</b> います</td></tr>
+        <tr><td class="row-label"><b style="color:var(--primary);">명사は 장소に</b><br><span style="color:#888;">아는 것의 위치 (그 사람이 주제)</span></td><td><span class="cell-na">ミラーさんは</span> 事務所<b>に</b> います</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">※ 이미 <strong>아는 대상</strong> = 「は」 + 문두 / <strong>새로 꺼내는 것</strong> = 「が」. (8과의 が↔は 흐름과 연결)</div>
+</div>
+
+<!-- 6 10과 ~に あります → ~です -->
+<div class="section-title"><div class="section-num">6</div><h2>「~に あります」 → 「~です」</h2></div>
+<div class="card">
+  <div class="pattern-num">第10課 · 文法</div>
+  <div class="pattern">~は [장소]です</div>
+  <div class="pattern-ko">위치를 말할 때는 3과 명사문 「です」로 바꿔 말할 수 있다</div>
+
+  <div class="table-wrap" style="margin-bottom:12px;">
+    <table>
+      <thead><tr><th>~に あります</th><th>~です (に 빠짐!)</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="exnum">⑩</span>東京ディズニーランドは<br>千葉県<b>に</b> あります</td>
+          <td>東京ディズニーランドは<br>千葉県<span class="cell-na">です</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    ※ 「です」로 바꾸면 <span class="warn">「に」가 사라진다</span> — 千葉県<strong>に</strong> です ✗.<br>
+    ※ 의문문도 마찬가지: どこ<strong>に</strong> ありますか &nbsp;→&nbsp; どこ<strong>です</strong>か.
+  </div>
+</div>
+
+<!-- 7 10과 의문사 -->
+<div class="section-title"><div class="section-num">7</div><h2>의문사 — なに / だれ</h2></div>
+<div class="card">
+  <div class="pattern-num">第10課 · 文法</div>
+  <div class="pattern">何が ありますか / だれが いますか</div>
+  <div class="pattern-ko">"무엇이 / 누가" 있는지 물을 때</div>
+
+  <div class="rulebox"><span class="lab i">사물</span>何<span class="k-i">が</span> ありますか &nbsp;&nbsp;|&nbsp;&nbsp; <span class="lab na">사람</span>だれ<span class="k-na">が</span> いますか</div>
+
+  <div class="note">※ 의문사 뒤는 반드시 <span class="warn">「が」</span> — 「なには」「だれは」 ✗.</div>
+
+  <div class="rangebar">📌 10과 예문 범위 &nbsp; ① ~ ⑭ <small>문형 3번까지 (4번 위치명사 — 上·下·前·後ろ 등 — 제외)</small></div>
+</div>
+
+<!-- 8 시험 범위 한눈에 -->
+<div class="section-title"><div class="section-num">8</div><h2>시험 범위 한눈에</h2></div>
+<div class="card">
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>구간</th><th>범위</th></tr></thead>
+      <tbody>
+        <tr><td class="row-label" style="font-weight:700;">1~6과 · 8과</td><td class="row-label">교재 전체 (7과 제외) · 형용사 활용(부정·과거 포함)</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">9과</td><td class="row-label">예문 ① ~ ④ (が그룹 · な형용사 · どんな)</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">10과</td><td class="row-label">예문 ① ~ ⑭ / 위치명사(문형 4) 제외</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">조수사 · 수 표현</td><td class="row-label">중간 범위 + 부록 표 (歳 · 階 · 시간 · 날짜 등)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">※ 조수사·숫자 표현은 교재 부록 표를 다시 확인해 두세요. (歳·階의 음 변화 등 불규칙 주의)</div>
+</div>
+
+<div class="footer">みんなの日本語 初級Ⅰ · 第9課・第10課 · 期末試験 範囲</div>
+
+</body>
+</html>
