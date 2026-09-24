@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>동사 총정리</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+:root {
+  --primary: #2d6a4f; --primary-light: #52b788; --accent: #f4a261;
+  --bg: #f8f9f4; --card-bg: #ffffff; --text: #1b1b1b; --text-light: #555;
+  --border: #d8e8d8; --tag-bg: #d8f3dc; --tag-text: #1b4332;
+  --example-bg: #f0f7f0; --note-bg: #fff8ee; --note-border: #f4a261;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 24px 16px 60px; max-width: 720px; margin: 0 auto;
+}
+.header { text-align: center; margin-bottom: 32px; padding: 28px 20px; background: var(--primary); border-radius: 16px; color: white; }
+.header .subtitle { font-size: 13px; opacity: 0.75; letter-spacing: 0.08em; margin-bottom: 6px; }
+.header h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+.header .jp-title { font-size: 15px; opacity: 0.85; font-weight: 300; }
+.section-title { display: flex; align-items: center; gap: 10px; margin: 32px 0 16px; }
+.section-num { background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+.section-title h2 { font-size: 17px; font-weight: 700; color: var(--primary); }
+.card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 14px; }
+.pattern-num { font-size: 12px; font-weight: 700; color: var(--primary-light); margin-bottom: 6px; letter-spacing: 0.05em; }
+.pattern { font-size: 18px; font-weight: 700; color: var(--primary); margin-bottom: 4px; font-family: 'Noto Sans JP', sans-serif; }
+.pattern-ko { font-size: 13px; color: var(--text-light); margin-bottom: 14px; }
+.example { background: var(--example-bg); border-radius: 8px; padding: 12px 14px; margin-bottom: 8px; }
+.example .jp { font-family: 'Noto Sans JP', sans-serif; font-size: 15px; color: var(--text); margin-bottom: 2px; }
+.example .ko { font-size: 13px; color: var(--text-light); }
+.note { background: var(--note-bg); border-left: 3px solid var(--note-border); border-radius: 0 8px 8px 0; padding: 10px 14px; margin-top: 10px; font-size: 13px; color: var(--text-light); }
+.note strong { color: var(--text); }
+.note .warn { color: var(--accent); font-weight: 700; }
+.table-wrap { overflow-x: auto; margin-top: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { background: var(--primary); color: white; padding: 10px 12px; text-align: center; font-weight: 500; }
+td { padding: 10px 12px; text-align: center; border-bottom: 1px solid var(--border); font-family: 'Noto Sans JP', sans-serif; }
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: var(--example-bg); }
+.row-label { font-family: 'Noto Sans KR', sans-serif; font-size: 13px; color: var(--text-light); text-align: left; font-weight: 500; }
+.tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.tag { background: var(--tag-bg); color: var(--tag-text); border-radius: 20px; padding: 4px 14px; font-family: 'Noto Sans JP', sans-serif; font-size: 14px; font-weight: 500; }
+.footer { text-align: center; font-size: 12px; color: #aaa; margin-top: 40px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="subtitle">일본어연습2 · 동사 총정리</div>
+  <h1>동사 총정리</h1>
+  <div class="jp-title">動詞란 무엇인가부터 て形까지</div>
+</div>
+
+<!-- 1 -->
+<div class="section-title"><div class="section-num">1</div><h2>동사란 무엇인가</h2></div>
+<div class="card">
+  <div class="pattern-ko">동작・변화・존재・상태 등을 나타내며, 활용(活用)하는 품사입니다.</div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>동작</th><th>변화</th><th>존재</th><th>상태</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--primary);">食べる</td><td style="font-weight:700;color:var(--primary);">なる</td><td style="font-weight:700;color:var(--primary);">いる・ある</td><td style="font-weight:700;color:var(--primary);">わかる</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">
+    食べる・行く 같은 동작만 보면 "동사=움직임"으로 굳어지기 쉽습니다. 그러나 わかる(상태)・いる・ある(존재)・なる(변화)도 모두 동사입니다.
+  </div>
+  <div class="table-wrap" style="margin-top:14px;">
+    <table>
+      <thead><tr><th>일본어</th><th>영어</th></tr></thead>
+      <tbody>
+        <tr><td>私は <b style="color:var(--primary);">行く</b></td><td>I <b style="color:var(--accent);">go</b></td></tr>
+        <tr><td>彼は <b style="color:var(--primary);">行く</b></td><td>He <b style="color:var(--accent);">go<u>es</u></b></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">일본어 동사는 주어의 인칭에 따라 형태가 바뀌지 않습니다. 영어처럼 He goes로 -s가 붙는 일이 없습니다.</div>
+</div>
+
+<!-- 2 -->
+<div class="section-title"><div class="section-num">2</div><h2>사전형(辞書形) vs ます형</h2></div>
+<div class="card">
+  <div class="pattern-ko">동사는 '몸통(어간)'과 '꼬리(어미)'로 나뉩니다. 몸통은 변하지 않고, 꼬리만 상황에 따라 바뀝니다. ます형은 몸통에 "ます"라는 꼬리를 붙인 형태일 뿐이며, 사전을 찾으려면 <strong>사전형(辞書形・じしょけい)</strong>이 필요합니다.</div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>ます형</th><th>사전형</th></tr></thead>
+      <tbody>
+        <tr><td>書きます</td><td style="font-weight:700;color:var(--primary);">書く</td></tr>
+        <tr><td>食べます</td><td style="font-weight:700;color:var(--primary);">食べる</td></tr>
+        <tr><td>します</td><td style="font-weight:700;color:var(--primary);">する</td></tr>
+        <tr><td>来ます</td><td style="font-weight:700;color:var(--primary);">来る</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">
+    사전형은 항상 <strong>う단</strong>으로 끝납니다(う・く・ぐ・す・つ・ぬ・ぶ・む・る 중 하나). "동사원형"이라는 말도 많이 쓰이지만, 정확한 용어는 사전형입니다 — 일본어 동사는 활용어이므로 사전형 역시 여러 활용형 중 하나일 뿐입니다.
+  </div>
+</div>
+
+<!-- 3 -->
+<div class="section-title"><div class="section-num">3</div><h2>동사의 그룹 — 분류와 판별법</h2></div>
+<div class="card">
+  <div class="pattern-ko">일본어 동사는 활용 방식에 따라 3그룹으로 나뉩니다.</div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>그룹</th><th>ます형 마지막 음</th><th>예</th><th>전통문법 명칭</th></tr></thead>
+      <tbody>
+        <tr><td class="row-label" style="font-weight:700;">Ⅰ그룹</td><td class="row-label">い단</td><td>かきます, のみます</td><td class="row-label">五段動詞</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">Ⅱ그룹</td><td class="row-label">え단(일부 い단)</td><td>たべます, みます</td><td class="row-label">一段動詞</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">Ⅲ그룹</td><td class="row-label">불규칙</td><td>します, きます</td><td class="row-label">不規則動詞</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="pattern" style="margin-top:16px;font-size:15px;">판별 절차</div>
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><td class="row-label" style="font-weight:700;">① ます형 확인</td><td class="row-label">買う → 買い</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">② ます 앞 소리</td><td class="row-label">あ・う・お단 → Ⅰ그룹 확정 ／ い・え단 → Ⅱ그룹 후보</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">③ 예외 확인</td><td class="row-label">る로 끝나는데 예외 리스트에 있으면 Ⅰ그룹</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">
+    <strong>예외(る로 끝나지만 Ⅰ그룹)</strong>: 帰る・入る・走る・切る・要る・知る 등. る 앞이 い・え단이라 Ⅱ그룹처럼 보이지만 실제로는 Ⅰ그룹입니다.
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="section-title"><div class="section-num">4</div><h2>활용형의 이름 — 5단 틀</h2></div>
+<div class="card">
+  <div class="pattern-ko">동사는 다섯 가지 활용형으로 펼쳐집니다. 이 5칸의 틀 자체는 Ⅰ・Ⅱ・Ⅲ그룹 모두에 똑같이 적용됩니다 — 다만 그 안에서 형태가 움직이는 방식이 그룹마다 다릅니다.</div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th style="text-align:left;">활용형</th><th>行く<br><span style="font-weight:400;font-size:11px;">Ⅰ그룹</span></th><th>食べる<br><span style="font-weight:400;font-size:11px;">Ⅱ그룹</span></th><th>する<br><span style="font-weight:400;font-size:11px;">Ⅲ그룹</span></th><th>来る<br><span style="font-weight:400;font-size:11px;">Ⅲ그룹</span></th></tr></thead>
+      <tbody>
+        <tr><td class="row-label" style="font-weight:700;">未然形</td><td>行か</td><td>食べ</td><td>し</td><td>来(こ)</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">連用形</td><td>行き</td><td>食べ</td><td>し</td><td>来(き)</td></tr>
+        <tr><td class="row-label" style="font-weight:700;color:var(--primary);">終止形</td><td style="font-weight:900;color:var(--primary);">行く</td><td style="font-weight:900;color:var(--primary);">食べる</td><td style="font-weight:900;color:var(--primary);">する</td><td style="font-weight:900;color:var(--primary);">来る(くる)</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">仮定形</td><td>行け</td><td>食べれ</td><td>すれ</td><td>来れ(くれ)</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">意向形</td><td>行こう</td><td>食べよう</td><td>しよう</td><td>来よう(こよう)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pattern" style="margin-top:16px;font-size:15px;">왜 그룹마다 이름이 다른가</div>
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><td class="row-label" style="font-weight:700;">Ⅰ그룹 = 五段</td><td class="row-label">未然形〜意向形을 지나면서 어간의 끝소리 자체가 <strong>か→き→く→け→こ</strong>로, 5개 모음단(あ・い・う・え・お)을 전부 옮겨 다님</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">Ⅱ그룹 = 一段</td><td class="row-label">어간(食べ)이 5칸 내내 <strong>완전히 고정</strong> — 未然形과 連用形이 똑같이 食べ. 움직이는 건 꼬리(뒤에 붙는 말)뿐이라 '한 단(一段)'</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">Ⅲ그룹 = 不規則</td><td class="row-label">어간 자체가 규칙 없이 형태를 바꿈 — する는 し/す/すれ/しよう로, 来る는 来의 읽기가 こ・き・くる・くれ로 칸마다 다 다름</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    <strong>같은 5칸 틀, 다른 움직임</strong> — Ⅰ그룹은 어간이 이동하고, Ⅱ그룹은 어간이 고정되며, Ⅲ그룹은 아예 규칙이 없습니다. 셋 다 "활용형이 5개"라는 점은 동일하되, 그 5개 칸을 채우는 방식만 다른 것입니다.<br><br>
+    未 = 아직 ~않다, 然 = 그러하다 → <strong>未然 = 아직 그러하지 않음</strong>이라는 뜻입니다. 다만 "未然形은 무조건 미실현의 의미"라고 고정하기보다, 전통문법의 활용형 이름으로 이해하면 됩니다.
+  </div>
+
+  <div class="note" style="border-left-color:var(--primary);background:var(--example-bg);margin-top:14px;">
+    <strong style="color:var(--primary);font-size:14px;">★ 連用形을 꼭 기억할 것</strong><br><br>
+    連用形은 ます만의 자리가 아닙니다. <strong>ます・たい・て・た</strong> 네 가지가 전부 이 連用形 자리에서 출발합니다 — 마치 하나의 콘센트에 여러 플러그를 꽂는 것과 같습니다.
+    <div class="table-wrap" style="margin-top:10px;">
+      <table>
+        <tbody>
+          <tr><td class="row-label" style="font-weight:700;">書き<span style="color:var(--primary);">＋ます</span></td><td class="row-label">書き<span style="color:var(--primary);">＋たい</span></td><td class="row-label">書き<span style="color:var(--primary);">＋て</span></td><td class="row-label">書き<span style="color:var(--primary);">＋た</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    て형과 た형은 이 連用形에서 <strong>같은 음편 규칙</strong>을 그대로 공유합니다 — 書いて ↔ 書いた.
+  </div>
+</div>
+
+<!-- 5 -->
+<div class="section-title"><div class="section-num">5</div><h2>て형/た형 만드는 법 — 음편(音便)</h2></div>
+<div class="card">
+  <div class="pattern-ko">音(소리) + 便(편하다) = <strong>소리를 편하게 만드는 것</strong>이 음편입니다.</div>
+  <div class="example"><div class="jp">かきて (규칙대로, 뻣뻣함) → <strong style="color:var(--primary);">かいて</strong> (실제, 입이 편한 쪽으로)</div></div>
+
+  <div class="table-wrap" style="margin-top:14px;">
+    <table>
+      <thead><tr><th>사전형 끝</th><th>규칙</th><th>예</th><th>명칭</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:900;">う・つ・る</td><td style="color:var(--primary);font-weight:900;">って</td><td>買う→買って</td><td class="row-label">촉음편</td></tr>
+        <tr><td style="font-weight:900;">む・ぶ・ぬ</td><td style="color:var(--primary);font-weight:900;">んで</td><td>飲む→飲んで</td><td class="row-label">발음편</td></tr>
+        <tr><td style="font-weight:900;">く</td><td style="color:var(--primary);font-weight:900;">いて</td><td>書く→書いて</td><td class="row-label">イ음편</td></tr>
+        <tr><td style="font-weight:900;">ぐ</td><td style="color:var(--primary);font-weight:900;">いで</td><td>泳ぐ→泳いで</td><td class="row-label">イ음편</td></tr>
+        <tr><td style="font-weight:900;">す</td><td style="color:var(--text-light);font-weight:900;">して</td><td>話す→話して</td><td class="row-label">음편 없음</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">
+    <span class="warn">예외</span> 行く는 규칙대로면 行いて이지만, 실제로는 <strong>行って</strong>입니다.<br>
+    Ⅱ・Ⅲ그룹은 음편이 없습니다(食べて, して, きて). す로 끝나는 Ⅰ그룹도 음편이 없어 Ⅱ・Ⅲ그룹과 같은 방식으로 붙습니다.<br>
+    た형도 같은 음편 규칙을 공유합니다 — 書いて ↔ 書いた.
+  </div>
+</div>
+
+<!-- 6 -->
+<div class="section-title"><div class="section-num">6</div><h2>예시 — 그룹별 전체 활용</h2></div>
+
+<div class="card">
+  <div class="pattern-num">Ⅰ그룹</div>
+  <div class="pattern">書く <span style="font-size:13px;color:var(--text-light);font-weight:400;">쓰다</span></div>
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><td class="row-label" style="font-weight:700;">未然形</td><td>書かない</td><td class="row-label">안 쓰다</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">連用形</td><td>書きます</td><td class="row-label">씁니다</td></tr>
+        <tr><td class="row-label" style="font-weight:700;color:var(--primary);">終止形</td><td style="font-weight:900;color:var(--primary);">書く</td><td class="row-label">쓰다</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">仮定形</td><td>書けば</td><td class="row-label">쓰면</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">意向形</td><td>書こう</td><td class="row-label">쓰자</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">て形</td><td>書<span style="color:var(--accent);">い</span>て</td><td class="row-label">써서 (イ음편)</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">た形</td><td>書<span style="color:var(--accent);">い</span>た</td><td class="row-label">썼다</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="card">
+  <div class="pattern-num">Ⅰ그룹</div>
+  <div class="pattern">読む <span style="font-size:13px;color:var(--text-light);font-weight:400;">읽다</span></div>
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><td class="row-label" style="font-weight:700;">未然形</td><td>読まない</td><td class="row-label">안 읽다</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">連用形</td><td>読みます</td><td class="row-label">읽습니다</td></tr>
+        <tr><td class="row-label" style="font-weight:700;color:var(--primary);">終止形</td><td style="font-weight:900;color:var(--primary);">読む</td><td class="row-label">읽다</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">仮定形</td><td>読めば</td><td class="row-label">읽으면</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">意向形</td><td>読もう</td><td class="row-label">읽자</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">て形</td><td>読<span style="color:var(--accent);">ん</span><span style="color:var(--accent);">で</span></td><td class="row-label">읽어서 (발음편)</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">た形</td><td>読<span style="color:var(--accent);">ん</span><span style="color:var(--accent);">だ</span></td><td class="row-label">읽었다</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="card">
+  <div class="pattern-num">Ⅰ그룹</div>
+  <div class="pattern">言う <span style="font-size:13px;color:var(--text-light);font-weight:400;">말하다</span></div>
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><td class="row-label" style="font-weight:700;">未然形</td><td>言<span style="color:var(--accent);">わ</span>ない</td><td class="row-label">안 말하다</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">連用形</td><td>言います</td><td class="row-label">말합니다</td></tr>
+        <tr><td class="row-label" style="font-weight:700;color:var(--primary);">終止形</td><td style="font-weight:900;color:var(--primary);">言う</td><td class="row-label">말하다</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">仮定形</td><td>言えば</td><td class="row-label">말하면</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">意向形</td><td>言おう</td><td class="row-label">말하자</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">て形</td><td>言<span style="color:var(--accent);">っ</span>て</td><td class="row-label">말해서 (촉음편)</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">た形</td><td>言<span style="color:var(--accent);">っ</span>た</td><td class="row-label">말했다</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">
+    <span class="warn">주의</span> う로 끝나는 Ⅰ그룹 동사는 未然形에서 <strong>あ가 아니라 わ</strong>로 바뀝니다 — 言あない가 아니라 <strong>言わない</strong>. 買う도 마찬가지로 買あない가 아니라 買わない입니다. う행은 원래 역사적으로 わ행에서 온 소리라, 지금도 이 흔적이 未然形에 남아있는 것입니다.
+  </div>
+</div>
+
+<div class="card">
+  <div class="pattern-num">Ⅱ그룹</div>
+  <div class="pattern">食べる <span style="font-size:13px;color:var(--text-light);font-weight:400;">먹다</span></div>
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><td class="row-label" style="font-weight:700;">未然形</td><td>食べない</td><td class="row-label">안 먹다</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">連用形</td><td>食べます</td><td class="row-label">먹습니다</td></tr>
+        <tr><td class="row-label" style="font-weight:700;color:var(--primary);">終止形</td><td style="font-weight:900;color:var(--primary);">食べる</td><td class="row-label">먹다</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">仮定形</td><td>食べれば</td><td class="row-label">먹으면</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">意向形</td><td>食べよう</td><td class="row-label">먹자</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">て形</td><td>食べて</td><td class="row-label">먹어서 (음편 없음)</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">た形</td><td>食べた</td><td class="row-label">먹었다</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="card">
+  <div class="pattern-num">Ⅲ그룹</div>
+  <div class="pattern">する <span style="font-size:13px;color:var(--text-light);font-weight:400;">하다</span></div>
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><td class="row-label" style="font-weight:700;">未然形</td><td>しない</td><td class="row-label">안 하다</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">連用形</td><td>します</td><td class="row-label">합니다</td></tr>
+        <tr><td class="row-label" style="font-weight:700;color:var(--primary);">終止形</td><td style="font-weight:900;color:var(--primary);">する</td><td class="row-label">하다</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">仮定形</td><td>すれば</td><td class="row-label">하면</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">意向形</td><td>しよう</td><td class="row-label">하자</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">て形</td><td>して</td><td class="row-label">해서 (불규칙)</td></tr>
+        <tr><td class="row-label" style="font-weight:700;">た形</td><td>した</td><td class="row-label">했다</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="footer">일본어연습2 · 동사 총정리</div>
+
+</body>
+</html>
