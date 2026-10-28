@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>가능형(可能形) 정리</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+:root {
+  --primary: #2d6a4f; --primary-light: #52b788; --accent: #e0671a; --suf: #2563eb;
+  --bg: #f8f9f4; --card-bg: #ffffff; --text: #1b1b1b; --text-light: #555;
+  --border: #d8e8d8; --tag-bg: #d8f3dc; --tag-text: #1b4332;
+  --example-bg: #f0f7f0; --note-bg: #fff8ee; --note-border: #f4a261;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 24px 16px 60px; max-width: 720px; margin: 0 auto;
+}
+.header { text-align: center; margin-bottom: 32px; padding: 28px 20px; background: var(--primary); border-radius: 16px; color: white; }
+.header .subtitle { font-size: 13px; opacity: 0.8; letter-spacing: 0.08em; margin-bottom: 6px; }
+.header h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+.header .jp-title { font-size: 15px; opacity: 0.88; font-weight: 300; font-family: 'Noto Sans JP', sans-serif; }
+
+.section-title { display: flex; align-items: center; gap: 10px; margin: 32px 0 16px; }
+.section-num { background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+.section-title h2 { font-size: 17px; font-weight: 700; color: var(--primary); }
+
+.card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 14px; }
+.lead { font-size: 14px; color: var(--text-light); margin-bottom: 14px; }
+.lead strong { color: var(--text); }
+
+.example { background: var(--example-bg); border-radius: 8px; padding: 12px 14px; margin-bottom: 8px; }
+.example .jp { font-family: 'Noto Sans JP', sans-serif; font-size: 16px; color: var(--text); margin-bottom: 2px; }
+.example .ko { font-size: 13px; color: var(--text-light); }
+
+.note { background: var(--note-bg); border-left: 3px solid var(--note-border); border-radius: 0 8px 8px 0; padding: 10px 14px; margin-top: 12px; font-size: 13px; color: var(--text-light); }
+.note strong { color: var(--text); }
+.note .warn { color: var(--accent); font-weight: 700; }
+
+.table-wrap { overflow-x: auto; margin-top: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { background: var(--primary); color: white; padding: 9px 8px; text-align: center; font-weight: 500; font-size: 13px; white-space: nowrap; }
+td { padding: 9px 8px; text-align: center; border-bottom: 1px solid var(--border); font-family: 'Noto Sans JP', 'Noto Sans KR', sans-serif; font-size: 15px; }
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: var(--example-bg); }
+td.l { text-align: left; }
+td.k { font-family: 'Noto Sans KR', sans-serif; font-size: 13px; color: var(--text-light); }
+td.g { font-family: 'Noto Sans KR', sans-serif; font-size: 12px; font-weight: 700; color: var(--primary); white-space: nowrap; }
+td.nw { white-space: nowrap; }
+.dual { line-height: 1.35; }
+.dual small { display: block; font-family: 'Noto Sans KR', sans-serif; font-size: 11.5px; color: var(--text-light); font-weight: 400; }
+.item { background: var(--example-bg); border-radius: 8px; padding: 10px 14px; margin-bottom: 8px; }
+.item .t { font-family: 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 700; color: var(--primary); }
+.item .d { font-size: 13px; color: var(--text-light); margin-top: 2px; }
+@media (max-width: 480px) {
+  body { padding: 16px 10px 48px; }
+  .card { padding: 16px 12px; }
+  th { padding: 8px 3px; font-size: 11.5px; }
+  td { padding: 8px 4px; font-size: 14px; }
+  td.g { font-size: 11px; }
+  td.k { font-size: 12px; }
+}
+tr.odd td { background: #fff3ea; }
+
+.hl { color: var(--accent); font-weight: 700; }
+.sf { color: var(--suf); font-weight: 700; }
+
+/* 5단 틀 */
+.slots { display: flex; justify-content: center; gap: 6px; margin: 4px 0 12px; }
+.slot { flex: 1; max-width: 92px; text-align: center; border: 1.5px solid var(--border); border-radius: 10px; padding: 8px 2px 6px; background: #fff; }
+.slot .kana { font-family: 'Noto Sans JP', sans-serif; font-size: 24px; font-weight: 900; line-height: 1.2; }
+.slot .nm { font-size: 10.5px; color: var(--text-light); margin-top: 2px; font-weight: 500; }
+.slot.on { border-color: var(--accent); background: #fff3ea; }
+.slot.on .kana, .slot.on .nm { color: var(--accent); font-weight: 700; }
+
+.eqline { font-family: 'Noto Sans JP', sans-serif; font-size: 22px; font-weight: 900; text-align: center; margin: 8px 0 4px; letter-spacing: .03em; }
+.eqline .arr { color: #bbb; margin: 0 10px; font-weight: 400; }
+
+/* 3그룹 요약 카드 */
+.three { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.mini { border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; background: #fff; }
+.mini .gh { font-size: 12px; font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+.mini .rule { font-family: 'Noto Sans JP', 'Noto Sans KR', sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+.mini .eg { font-family: 'Noto Sans JP', sans-serif; font-size: 14px; color: var(--text-light); line-height: 1.8; }
+.mini.irr { border-color: var(--accent); }
+.mini.irr .gh { color: var(--accent); }
+
+.footer { text-align: center; font-size: 12px; color: #aaa; margin-top: 40px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="subtitle">일본어연습2 · 교재 밖 수업 보충</div>
+  <h1>가능형(可能形) 정리</h1>
+  <div class="jp-title">「〜ことが できます」를 동사 한 단어로</div>
+</div>
+
+<!-- 1 -->
+<div class="section-title"><div class="section-num">1</div><h2>가능형이란</h2></div>
+<div class="card">
+  <div class="lead">6과에서 배운 <strong>「동사 사전형 + ことが できます」</strong>와 같은 뜻을 동사 하나로 말하는 형태입니다. 문장이 짧아서 일상 회화에서 자주 쓰입니다.</div>
+  <div class="example"><div class="jp">日本語を 話す ことが できます。</div><div class="ko">일본어를 말할 수 있습니다. (6과 문형)</div></div>
+  <div class="example"><div class="jp">日本語が <span class="hl">話せ</span>ます。</div><div class="ko">일본어를 말할 수 있습니다. (가능형)</div></div>
+
+  <div style="font-size:14px;font-weight:700;color:var(--primary);margin-top:14px;">조사는 を만 が로 바뀝니다</div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>조사</th><th>ことが できます</th><th>가능형</th></tr></thead>
+      <tbody>
+        <tr><td class="g"><span class="hl">を → が</span></td><td class="l">漢字<span class="hl">を</span> 読む ことが できます</td><td class="l">漢字<span class="hl">が</span> 読めます</td></tr>
+        <tr><td class="g">に 그대로</td><td class="l">自転車<b>に</b> 乗る ことが できます</td><td class="l">自転車<b>に</b> 乗れます</td></tr>
+        <tr><td class="g">で 그대로</td><td class="l">カード<b>で</b> 払う ことが できます</td><td class="l">カード<b>で</b> 払えます</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note"><span class="warn">주의</span> 한국어는 「~을 읽을 수 있다」라서 を를 쓰고 싶어지지만, 가능형은 대상에 <strong>が</strong>를 씁니다. 1과의 「が 欲しいです」와 같은 함정입니다. (구어에서는 を를 그대로 쓰기도 합니다.)</div>
+</div>
+
+<!-- 2 -->
+<div class="section-title"><div class="section-num">2</div><h2>만드는 법 — 1그룹</h2></div>
+<div class="card">
+  <div class="lead">사전형 끝소리의 <strong>う단을 え단으로 바꾸고 る</strong>를 붙입니다.</div>
+  <div class="slots">
+    <div class="slot"><div class="kana">か</div><div class="nm">未然形</div></div>
+    <div class="slot"><div class="kana">き</div><div class="nm">連用形</div></div>
+    <div class="slot"><div class="kana">く</div><div class="nm">終止形</div></div>
+    <div class="slot on"><div class="kana">け</div><div class="nm">仮定形<br>가능형 어간</div></div>
+    <div class="slot"><div class="kana">こ</div><div class="nm">意向形</div></div>
+  </div>
+  <div class="eqline">書く<span class="arr">→</span>書<span class="hl">け</span><span class="sf">る</span></div>
+  <div class="note">5단 틀에서 <strong>け</strong>는 仮定形(書けば)의 칸입니다. 어간은 같고, 뒤에 붙는 말이 ば인지 る인지만 다릅니다.</div>
+
+  <div style="font-size:14px;font-weight:700;color:var(--primary);margin-top:18px;">어미 9종</div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>끝소리</th><th>사전형</th><th>가능형</th><th>뜻</th></tr></thead>
+      <tbody>
+        <tr><td class="g">う → え</td><td>買う</td><td>買<span class="hl">え</span><span class="sf">る</span></td><td class="k">살 수 있다</td></tr>
+        <tr><td class="g">く → け</td><td>書く</td><td>書<span class="hl">け</span><span class="sf">る</span></td><td class="k">쓸 수 있다</td></tr>
+        <tr><td class="g">ぐ → げ</td><td>泳ぐ</td><td>泳<span class="hl">げ</span><span class="sf">る</span></td><td class="k">헤엄칠 수 있다</td></tr>
+        <tr><td class="g">す → せ</td><td>話す</td><td>話<span class="hl">せ</span><span class="sf">る</span></td><td class="k">말할 수 있다</td></tr>
+        <tr><td class="g">つ → て</td><td>待つ</td><td>待<span class="hl">て</span><span class="sf">る</span></td><td class="k">기다릴 수 있다</td></tr>
+        <tr><td class="g">ぬ → ね</td><td>死ぬ</td><td>死<span class="hl">ね</span><span class="sf">る</span></td><td class="k">(거의 쓰지 않음)</td></tr>
+        <tr><td class="g">ぶ → べ</td><td>呼ぶ</td><td>呼<span class="hl">べ</span><span class="sf">る</span></td><td class="k">부를 수 있다</td></tr>
+        <tr><td class="g">む → め</td><td>読む</td><td>読<span class="hl">め</span><span class="sf">る</span></td><td class="k">읽을 수 있다</td></tr>
+        <tr><td class="g">る → れ</td><td>帰る</td><td>帰<span class="hl">れ</span><span class="sf">る</span></td><td class="k">돌아갈 수 있다</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">帰る, 走る처럼 る 앞이 え·い단이라 2그룹처럼 보이는 1그룹도 같은 방식입니다. (帰る → 帰れる, 走る → 走れる)</div>
+</div>
+
+<!-- 3 -->
+<div class="section-title"><div class="section-num">3</div><h2>만드는 법 — 2그룹·3그룹</h2></div>
+<div class="card">
+  <div class="three">
+    <div class="mini">
+      <div class="gh">2그룹 (一段)</div>
+      <div class="rule">어간 + <span class="sf">られる</span></div>
+      <div class="eg">食べる → 食べ<span class="sf">られる</span> (먹을 수 있다)<br>見る → 見<span class="sf">られる</span> (볼 수 있다)<br>起きる → 起き<span class="sf">られる</span> (일어날 수 있다)<br>覚える → 覚え<span class="sf">られる</span> (외울 수 있다)</div>
+    </div>
+    <div class="mini irr">
+      <div class="gh">3그룹 (불규칙)</div>
+      <div class="rule">외워야 합니다</div>
+      <div class="eg">する → <span class="hl">できる</span> (勉強する → 勉強<span class="hl">できる</span>)<br>来る(くる) → 来<span class="sf">られる</span>(こられる)</div>
+    </div>
+  </div>
+  <div class="note"><strong>수동형과 모양이 같습니다.</strong> 食べられる는 「먹을 수 있다」일 수도 있고 「먹히다」일 수도 있습니다. 수동형은 나중에 배우며, 지금은 문맥으로 구분합니다.<br><span class="warn">참고</span> 6과의 「運転が できます」의 できます가 바로 する의 가능형입니다.</div>
+
+  <div style="font-size:14px;font-weight:700;color:var(--primary);margin-top:18px;">그룹별 한눈에 보기</div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>그룹</th><th>만드는 법</th><th>예</th></tr></thead>
+      <tbody>
+        <tr><td class="g">1그룹</td><td class="l">끝소리를 <span class="hl">え단</span> + <span class="sf">る</span></td><td class="l">書く → 書け<span class="sf">る</span></td></tr>
+        <tr><td class="g">2그룹</td><td class="l">어간 + <span class="sf">られる</span></td><td class="l">食べる → 食べ<span class="sf">られる</span></td></tr>
+        <tr><td class="g">する</td><td class="l"><span class="hl">できる</span></td><td class="l">勉強する → 勉強できる</td></tr>
+        <tr><td class="g">来る</td><td class="l">来<span class="sf">られる</span> (こられる)</td><td class="l">来る → 来られる</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="section-title"><div class="section-num">4</div><h2>가능형의 활용</h2></div>
+<div class="card">
+  <div class="lead">가능형은 모두 <strong>る로 끝나는 2그룹처럼 활용</strong>합니다. る를 떼고 뒤에 붙이면 됩니다.</div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>활용</th><th>書ける</th><th>食べられる</th><th>できる</th></tr></thead>
+      <tbody>
+        <tr><td class="g">〜ます</td><td class="nw">書け<span class="sf">ます</span></td><td class="nw">食べられ<span class="sf">ます</span></td><td class="nw">でき<span class="sf">ます</span></td></tr>
+        <tr><td class="g">〜ない</td><td class="nw">書け<span class="sf">ない</span></td><td class="nw">食べられ<span class="sf">ない</span></td><td class="nw">でき<span class="sf">ない</span></td></tr>
+        <tr><td class="g">〜て</td><td class="nw">書け<span class="sf">て</span></td><td class="nw">食べられ<span class="sf">て</span></td><td class="nw">でき<span class="sf">て</span></td></tr>
+        <tr><td class="g">〜た</td><td class="nw">書け<span class="sf">た</span></td><td class="nw">食べられ<span class="sf">た</span></td><td class="nw">でき<span class="sf">た</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note"><span class="warn">주의</span> 음편은 필요 없습니다. 書ける의 て형은 書け<b>て</b>이고, 書く의 て형 書<b>いて</b>와 헷갈리지 않아야 합니다.</div>
+</div>
+
+<!-- 5 -->
+<div class="section-title"><div class="section-num">5</div><h2>ら抜き言葉</h2></div>
+<div class="card">
+  <div class="lead">2그룹과 来る의 가능형에서 <strong>ら를 빼고</strong> 말하는 형태입니다. 회화에서 자주 들립니다.</div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>원래 형태</th><th>ら 뺀 형태</th><th>뜻</th></tr></thead>
+      <tbody>
+        <tr><td>食べ<span class="sf">られ</span>る</td><td>食べ<span class="hl">れ</span>る</td><td class="k">먹을 수 있다</td></tr>
+        <tr><td>見<span class="sf">られ</span>る</td><td>見<span class="hl">れ</span>る</td><td class="k">볼 수 있다</td></tr>
+        <tr><td>起き<span class="sf">られ</span>る</td><td>起き<span class="hl">れ</span>る</td><td class="k">일어날 수 있다</td></tr>
+        <tr><td>来<span class="sf">られ</span>る</td><td>来<span class="hl">れ</span>る</td><td class="k">올 수 있다</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note"><strong>1그룹(書ける)과 できる에는 ら가 없으므로 해당되지 않습니다.</strong> 말에서는 흔하지만 <strong>시험이나 글에서는 られる</strong>를 씁니다.</div>
+</div>
+
+<!-- 6 -->
+<div class="section-title"><div class="section-num">6</div><h2>가능형을 안 쓰거나 뜻이 달라지는 동사</h2></div>
+<div class="card">
+  <div class="item"><div class="t">見える · 聞こえる</div><div class="d">「저절로 보인다·들린다」입니다. 가능형 見られる, 聞ける와 뜻이 다릅니다.</div></div>
+  <div class="item"><div class="t">ある · いる · わかる</div><div class="d">이미 상태나 가능의 뜻이라 가능형을 따로 만들지 않습니다. (わかれる는 「갈라지다」로 다른 동사입니다.)</div></div>
+  <div class="item"><div class="t">死ねる</div><div class="d">문법으로는 맞지만 일상에서는 거의 쓰지 않습니다.</div></div>
+  <div class="note">가능형은 「하려고 하면 할 수 있다」를 나타내므로, 의지와 상관없이 일어나는 일에는 어색합니다.</div>
+</div>
+
+<!-- 7 -->
+<div class="section-title"><div class="section-num">7</div><h2>동사 20개 가능형 (정답)</h2></div>
+<div class="card">
+  <div class="lead">수업에서 연습한 동사 20개의 가능형입니다. 사전형을 가리고 가능형을 직접 만들어 본 뒤 맞춰 보십시오.</div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>사전형 · 뜻</th><th>가능형</th><th>그룹 · 참고</th></tr></thead>
+      <tbody>
+        <tr><td class="dual">買う<small>사다</small></td><td class="nw"><b class="sf">買える</b></td><td class="g">1그룹</td></tr>
+        <tr><td class="dual">使う<small>사용하다</small></td><td class="nw"><b class="sf">使える</b></td><td class="g">1그룹</td></tr>
+        <tr><td class="dual">書く<small>쓰다</small></td><td class="nw"><b class="sf">書ける</b></td><td class="g">1그룹</td></tr>
+        <tr><td class="dual">行く<small>가다</small></td><td class="nw"><b class="sf">行ける</b></td><td class="g">1그룹</td></tr>
+        <tr><td class="dual">泳ぐ<small>헤엄치다</small></td><td class="nw"><b class="sf">泳げる</b></td><td class="g">1그룹</td></tr>
+        <tr><td class="dual">話す<small>말하다</small></td><td class="nw"><b class="sf">話せる</b></td><td class="g">1그룹</td></tr>
+        <tr><td class="dual">待つ<small>기다리다</small></td><td class="nw"><b class="sf">待てる</b></td><td class="g">1그룹</td></tr>
+        <tr><td class="dual">遊ぶ<small>놀다</small></td><td class="nw"><b class="sf">遊べる</b></td><td class="g">1그룹</td></tr>
+        <tr><td class="dual">読む<small>읽다</small></td><td class="nw"><b class="sf">読める</b></td><td class="g">1그룹</td></tr>
+        <tr><td class="dual">飲む<small>마시다</small></td><td class="nw"><b class="sf">飲める</b></td><td class="g">1그룹</td></tr>
+        <tr class="odd"><td class="dual">帰る<small>돌아가다</small></td><td class="nw"><b class="hl">帰れる</b></td><td class="g">1그룹<br>예외 る</td></tr>
+        <tr class="odd"><td class="dual">走る<small>달리다</small></td><td class="nw"><b class="hl">走れる</b></td><td class="g">1그룹<br>예외 る</td></tr>
+        <tr><td class="dual">乗る<small>타다</small></td><td class="nw"><b class="sf">乗れる</b></td><td class="g">1그룹</td></tr>
+        <tr><td class="dual">作る<small>만들다</small></td><td class="nw"><b class="sf">作れる</b></td><td class="g">1그룹</td></tr>
+        <tr><td class="dual">食べる<small>먹다</small></td><td class="nw"><b class="sf">食べられる</b></td><td class="g">2그룹<br>ら抜き 食べれる</td></tr>
+        <tr><td class="dual">見る<small>보다</small></td><td class="nw"><b class="sf">見られる</b></td><td class="g">2그룹<br>ら抜き 見れる</td></tr>
+        <tr><td class="dual">起きる<small>일어나다</small></td><td class="nw"><b class="sf">起きられる</b></td><td class="g">2그룹<br>ら抜き 起きれる</td></tr>
+        <tr><td class="dual">覚える<small>외우다</small></td><td class="nw"><b class="sf">覚えられる</b></td><td class="g">2그룹<br>ら抜き 覚えれる</td></tr>
+        <tr><td class="dual">勉強する<small>공부하다</small></td><td class="nw"><b class="hl">勉強できる</b></td><td class="g">3그룹</td></tr>
+        <tr><td class="dual">来る<small>오다</small></td><td class="nw"><b class="sf">来られる</b></td><td class="g">3그룹<br>ら抜き 来れる</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="footer">일본어연습2 · 가능형 정리</div>
+
+</body>
+</html>
